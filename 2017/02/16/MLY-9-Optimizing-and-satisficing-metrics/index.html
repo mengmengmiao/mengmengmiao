@@ -8,16 +8,97 @@
   <link rel="dns-prefetch" href="https://mengmengmiao.github.io">
   <title>MLY -- 9.Optimizing and satisficing metrics | mengmengmiao</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="��ʵ������һ���������������ķ��������裬�㽫׼ȷ�ʺ�ʱ�俴��ͬ����Ҫ�������">
+  <meta name="description" content="其实，还有一种组合多个评估矩阵的方法。假设，你将准确率和运行时间看做同等重要的评估项，你需要从以下三个分类器中选择一个：
+
+
+
+classifier
+accuracy
+running time
+
+
+
+
+A
+90%
+80ms
+
+
+B
+92%
+95ms
+
+
+C
+95%
+1500ms
+
+
+
+如按照上一章的方法，通过将准确率和运行时间放入一个公式中得到单数值矩阵看起来是不自然的：">
 <meta property="og:type" content="article">
 <meta property="og:title" content="MLY -- 9.Optimizing and satisficing metrics">
 <meta property="og:url" content="https://mengmengmiao.github.io/2017/02/16/MLY-9-Optimizing-and-satisficing-metrics/index.html">
 <meta property="og:site_name" content="mengmengmiao">
-<meta property="og:description" content="��ʵ������һ���������������ķ��������裬�㽫׼ȷ�ʺ�ʱ�俴��ͬ����Ҫ�������">
-<meta property="og:updated_time" content="2017-02-16T07:29:47.740Z">
+<meta property="og:description" content="其实，还有一种组合多个评估矩阵的方法。假设，你将准确率和运行时间看做同等重要的评估项，你需要从以下三个分类器中选择一个：
+
+
+
+classifier
+accuracy
+running time
+
+
+
+
+A
+90%
+80ms
+
+
+B
+92%
+95ms
+
+
+C
+95%
+1500ms
+
+
+
+如按照上一章的方法，通过将准确率和运行时间放入一个公式中得到单数值矩阵看起来是不自然的：">
+<meta property="og:updated_time" content="2017-02-16T08:07:15.005Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MLY -- 9.Optimizing and satisficing metrics">
-<meta name="twitter:description" content="��ʵ������һ���������������ķ��������裬�㽫׼ȷ�ʺ�ʱ�俴��ͬ����Ҫ�������">
+<meta name="twitter:description" content="其实，还有一种组合多个评估矩阵的方法。假设，你将准确率和运行时间看做同等重要的评估项，你需要从以下三个分类器中选择一个：
+
+
+
+classifier
+accuracy
+running time
+
+
+
+
+A
+90%
+80ms
+
+
+B
+92%
+95ms
+
+
+C
+95%
+1500ms
+
+
+
+如按照上一章的方法，通过将准确率和运行时间放入一个公式中得到单数值矩阵看起来是不自然的：">
   
     <link rel="alternative" href="/atom.xml" title="mengmengmiao" type="application/atom+xml">
   
@@ -177,7 +258,34 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>��ʵ������һ���������������ķ�����<br>���裬�㽫׼ȷ�ʺ�ʱ�俴��ͬ����Ҫ�������</p>
+        <p>其实，还有一种组合多个评估矩阵的方法。<br>假设，你将准确率和运行时间看做同等重要的评估项，你需要从以下三个分类器中选择一个：</p>
+<table>
+<thead>
+<tr>
+<th>classifier</th>
+<th>accuracy</th>
+<th>running time</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>90%</td>
+<td>80ms</td>
+</tr>
+<tr>
+<td>B</td>
+<td>92%</td>
+<td>95ms</td>
+</tr>
+<tr>
+<td>C</td>
+<td>95%</td>
+<td>1500ms</td>
+</tr>
+</tbody>
+</table>
+<p>如按照上一章的方法，通过将准确率和运行时间放入一个公式中得到单数值矩阵看起来是不自然的：<br>                Accuracy -0.5*RunningTime<br>你可以这样做：首先，确定能接受的运行时间，例如运行时间在100ms内都是可接受的；然后，在满足运行时间这个条件下，最大化准确率。这里</p>
 
       
 
@@ -222,7 +330,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">����</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">翻译</a>
         		</li>
       		
 		</ul>
@@ -399,10 +507,6 @@
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">翻译</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">����</a>
               </li>
              
               <li class="article-tag-list-item">

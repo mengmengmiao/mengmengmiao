@@ -178,7 +178,34 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>��ʵ������һ���������������ķ�����<br>���裬�㽫׼ȷ�ʺ�ʱ�俴��ͬ����Ҫ�������</p>
+        <p>其实，还有一种组合多个评估矩阵的方法。<br>假设，你将准确率和运行时间看做同等重要的评估项，你需要从以下三个分类器中选择一个：</p>
+<table>
+<thead>
+<tr>
+<th>classifier</th>
+<th>accuracy</th>
+<th>running time</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>90%</td>
+<td>80ms</td>
+</tr>
+<tr>
+<td>B</td>
+<td>92%</td>
+<td>95ms</td>
+</tr>
+<tr>
+<td>C</td>
+<td>95%</td>
+<td>1500ms</td>
+</tr>
+</tbody>
+</table>
+<p>如按照上一章的方法，通过将准确率和运行时间放入一个公式中得到单数值矩阵看起来是不自然的：<br>                Accuracy -0.5*RunningTime<br>你可以这样做：首先，确定能接受的运行时间，例如运行时间在100ms内都是可接受的；然后，在满足运行时间这个条件下，最大化准确率。这里</p>
 
       
 
@@ -192,7 +219,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">����</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">翻译</a>
         		</li>
       		
 		</ul>
@@ -240,7 +267,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>分类<font color = blue>准确率</font>(classification accuracy)是一个单数值的评估矩阵：将开发集（或测试集）输入分类器分类，分类器返回<font color = blue>“被分类器正确分类的数据占输入数据集的比例”</font>。如果分类器A获得97%的准确率，分类器B获得90%的准确率费，根据评估矩阵，分类器A较好。<br>
+        <p>分类<font color = blue>准确率</font>(classification accuracy)是一个单数值的评估度量：将开发集（或测试集）输入分类器分类，分类器返回<font color = blue>“被分类器正确分类的数据占输入数据集的比例”</font>。如果分类器A获得97%的准确率，分类器B获得90%的准确率费，根据评估度量，分类器A较好。<br>
         
           <a class="article-more-a" href="/2017/02/16/MLY-8-Establish-a-single-number-evaluation-metric-for-your-team-to-optimize/#more">more >></a>
         
@@ -891,10 +918,6 @@
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">翻译</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">����</a>
               </li>
              
               <li class="article-tag-list-item">

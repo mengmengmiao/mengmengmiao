@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="mengmengmiao">
 <meta property="og:description" content="分类准确率(classification accuracy)是一个单数值的评估矩阵：将开发集（或测试集）输入分类器分类，分类器返回“被分类器正确分类的数据占输入数据集的比例”。如果分类器A获得97%的准确率，分类器B获得90%的准确率费，根据评估矩阵，分类器A较好。
 与此不同的是，精度率和召回率（precision and recall）就不是一个单数值评估矩阵：它用两个数值去评估分类器。多数值评">
-<meta property="og:updated_time" content="2017-02-16T06:07:29.983Z">
+<meta property="og:updated_time" content="2017-02-16T06:37:40.047Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MLY -- 8.Establish a single-number evaluation metric for your team to optimize">
 <meta name="twitter:description" content="分类准确率(classification accuracy)是一个单数值的评估矩阵：将开发集（或测试集）输入分类器分类，分类器返回“被分类器正确分类的数据占输入数据集的比例”。如果分类器A获得97%的准确率，分类器B获得90%的准确率费，根据评估矩阵，分类器A较好。
@@ -203,6 +203,9 @@
 </tr>
 </tbody>
 </table>
+<p>这里，并不能直接看出两个分类器中哪个更好。</p>
+<p>在实际开发过程中，你的团队将会不同的算法框架、模型参数、特征选择等。而使用单数值评估矩阵（如准确率）能快速地对这些算法的优劣做一个排序，从而看出哪一个算法更好。</p>
+<p>如果你真的关心精确率和召回率，我建议你使用一种标准的方法将两种评价数值糅合成一个。例如，可取精确率和召回率的平均值作为评价数值；还可以计算“F1 score”，这是取平均值的一种改进的方法，比取平均值的表现好多了。</p>
 
       
 

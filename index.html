@@ -158,6 +158,117 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-MLY-9-Optimizing-and-satisficing-metrics-1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/02/16/MLY-9-Optimizing-and-satisficing-metrics-1/">MLY -- 9.Optimizing and satisficing metrics</a>
+    </h1>
+  
+
+        
+        <a href="/2017/02/16/MLY-9-Optimizing-and-satisficing-metrics-1/" class="archive-article-date">
+  	<time datetime="2017-02-16T07:24:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-16</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/02/16/MLY-9-Optimizing-and-satisficing-metrics-1/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
+    <article id="post-MLY-9-Optimizing-and-satisficing-metrics" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/02/16/MLY-9-Optimizing-and-satisficing-metrics/">MLY -- 9.Optimizing and satisficing metrics</a>
+    </h1>
+  
+
+        
+        <a href="/2017/02/16/MLY-9-Optimizing-and-satisficing-metrics/" class="archive-article-date">
+  	<time datetime="2017-02-16T07:22:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-16</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">����</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/02/16/MLY-9-Optimizing-and-satisficing-metrics/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
     <article id="post-MLY-8-Establish-a-single-number-evaluation-metric-for-your-team-to-optimize" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -178,59 +289,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>分类<font color="blue">准确率</font>(classification accuracy)是一个单数值的评估矩阵：将开发集（或测试集）输入分类器分类，分类器返回<font color="blue">“被分类器正确分类的数据占输入数据集的比例”</font>。如果分类器A获得97%的准确率，分类器B获得90%的准确率费，根据评估矩阵，分类器A较好。</p>
-<p>与此不同的是，<font color="blue">精度率和召回率</font>（precision and recall）就不是一个单数值评估矩阵：它用两个数值去评估分类器。多数值评估矩阵使得比较分类算法时变得困难。假设你的分类算法表现如下：</p>
-<table>
-<thead>
-<tr>
-<th>classifier</th>
-<th>precision</th>
-<th>recall</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>A</td>
-<td>95%</td>
-<td>90%</td>
-</tr>
-<tr>
-<td>B</td>
-<td>98%</td>
-<td>85%</td>
-</tr>
-</tbody>
-</table>
-<p>这里，并不能直接看出两个分类器中哪个更好。</p>
-<p>在实际开发过程中，你的团队将用不同的算法框架、模型参数、特征选择等。而使用单数值评估矩阵（如准确率）能快速地对这些算法的优劣做一个排序，从而看出哪一个算法更好。</p>
-<p>如果你真的关心精确率和召回率，我建议你使用一种标准的方法将两种评价数值糅合成一个。例如，可取精确率和召回率的平均值作为评价数值；还可以取“F1 score”，F1 score是计算平均值的一种改进的方法，比取平均值的表现好多了。</p>
-<table>
-<thead>
-<tr>
-<th>classifier</th>
-<th>precision</th>
-<th>recall</th>
-<th>F1 score</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>A</td>
-<td>95%</td>
-<td>90%</td>
-<td><strong>92.4%</strong></td>
-</tr>
-<tr>
-<td>B</td>
-<td>98%</td>
-<td>85%</td>
-<td><strong>91.0%</strong></td>
-</tr>
-</tbody>
-</table>
-<p>单数值评估矩阵能让你从众多算法中快速选出哪个算法最优，它对众多算法进行偏好排序，因而明确了进展的方向。</p>
-<p>最后，假设你分别在四个主要市场（(i)US,(ii)China,(iii)India,(iv)其他）跟踪你的猫分类器准确率，因此你得到四个矩阵。对这四个矩阵取平均或加权平均值，你就会得到一个评估数值。取平均或加权平均是将多个矩阵变成一个的最常用的方法。<br>注释：<br> 精确率和召回率：以猫图片分类器为例，精确率是指在分类器分类成猫的图片中，真的是猫图片的比例。召回率是指在开发集（或测试集）中的猫图片被分类器分类成猫图片的概率。在高准确率和高召回率间，经常需要权衡（tradeoff）。<br> F1 score： 如果你想了解更多，可以点击 <a href="https://en.wikipedia.org/wiki/F1_score" target="_blank" rel="external">https://en.wikipedia.org/wiki/F1_score</a>。F1 score就是精确率和准确率的几何平均值，是这样计算的 2/((1/precision)+(1/recall))。</p>
-
+        <p>分类<font color = blue>准确率</font>(classification accuracy)是一个单数值的评估矩阵：将开发集（或测试集）输入分类器分类，分类器返回<font color = blue>“被分类器正确分类的数据占输入数据集的比例”</font>。如果分类器A获得97%的准确率，分类器B获得90%的准确率费，根据评估矩阵，分类器A较好。<br>
+        
+          <a class="article-more-a" href="/2017/02/16/MLY-8-Establish-a-single-number-evaluation-metric-for-your-team-to-optimize/#more">more >></a>
+        
       
 
       
@@ -719,141 +781,10 @@
 
 
   
-    <article id="post-Machine-Learning-Yearning-Why-Machine-Learning-Strategy" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/01/25/Machine-Learning-Yearning-Why-Machine-Learning-Strategy/">MLY翻译 -- 1.Why Machine Learning Strategy?</a>
-    </h1>
-  
-
-        
-        <a href="/2017/01/25/Machine-Learning-Yearning-Why-Machine-Learning-Strategy/" class="archive-article-date">
-  	<time datetime="2017-01-25T13:42:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-01-25</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>机器学习是很多应用的基础，如网页搜索，反垃圾邮件，语音识别，推荐系统等。如果你的团队正在做一个基于机器学习的应用，这本书能够帮你的团队取得快速的进步。</p>
-<h2 id="一个例子：提供猫图片的创业公司"><a href="#一个例子：提供猫图片的创业公司" class="headerlink" title="一个例子：提供猫图片的创业公司"></a>一个例子：提供猫图片的创业公司</h2><p>假如你现在正在创建一个为猫奴提供很多猫图片的公司，你用神经网络建立一个从图片中检测猫的计算机视觉系统。但悲剧的是，你发现你的学习算法精度不够，面临提高猫检测器精度的巨大压力，你要怎么做？<br>你的小团队很给力，他们提出以下解决问题的方向：<br>
-        
-          <a class="article-more-a" href="/2017/01/25/Machine-Learning-Yearning-Why-Machine-Learning-Strategy/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">翻译</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/01/25/Machine-Learning-Yearning-Why-Machine-Learning-Strategy/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-this-is-meng" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/01/25/this-is-meng/">MLY翻译 -- Machine Learning Yearning 目录</a>
-    </h1>
-  
-
-        
-        <a href="/2017/01/25/this-is-meng/" class="archive-article-date">
-  	<time datetime="2017-01-25T13:11:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-01-25</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>寒假，玩心太重，无法静下心来看一篇论文。翻译一下<em>Machine Learning Yearning</em>，期待能坚持下去。</p>
-<blockquote>
-<ul>
-<li><a href="https://mengmengmiao.github.io/2017/01/25/Machine-Learning-Yearning-Why-Machine-Learning-Strategy/">为何需要机器学习策略？</a></li>
-<li><a href="https://mengmengmiao.github.io/2017/01/25/Machine-Learning-Yearning-How-to-use-this-book-to-help-your-team/">如何用这本书帮助你的团队？</a></li>
-<li><a href="https://mengmengmiao.github.io/2017/01/27/MLY-Prerequisites-and-Notation/">预备知识和符号约定</a></li>
-<li><a href="https://mengmengmiao.github.io/2017/01/27/MLY-Scale-drivers-machine-learning-progress/">规模（scale）促使机器学习进步</a></li>
-</ul>
-</blockquote>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">翻译</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/01/25/this-is-meng/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+    </nav>
   
 
 
@@ -944,6 +875,10 @@
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">翻译</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">����</a>
               </li>
              
               <li class="article-tag-list-item">

@@ -8,7 +8,7 @@
   <link rel="dns-prefetch" href="https://mengmengmiao.github.io">
   <title>MLY -- 9.Optimizing and satisficing metrics | mengmengmiao</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="其实，还有一种组合多个评估矩阵的方法。假设，你将准确率和运行时间看做同等重要的评估项，你需要从以下三个分类器中选择一个：
+  <meta name="description" content="其实，还有一种组合多个评价度量的方法。假设，你将准确率和运行时间看做同等重要的评价项，你需要从以下三个分类器中选择一个：
 
 
 
@@ -35,12 +35,12 @@ C
 
 
 
-如按照上一章的方法，通过将准确率和运行时间放入一个公式中得到单数值矩阵看起来是不自然的：">
+如按照上一章的方法，通过将准确率和运行时间放入一个公式中得到单数值度量看起来是不自然的：">
 <meta property="og:type" content="article">
 <meta property="og:title" content="MLY -- 9.Optimizing and satisficing metrics">
 <meta property="og:url" content="https://mengmengmiao.github.io/2017/02/16/MLY-9-Optimizing-and-satisficing-metrics/index.html">
 <meta property="og:site_name" content="mengmengmiao">
-<meta property="og:description" content="其实，还有一种组合多个评估矩阵的方法。假设，你将准确率和运行时间看做同等重要的评估项，你需要从以下三个分类器中选择一个：
+<meta property="og:description" content="其实，还有一种组合多个评价度量的方法。假设，你将准确率和运行时间看做同等重要的评价项，你需要从以下三个分类器中选择一个：
 
 
 
@@ -67,11 +67,11 @@ C
 
 
 
-如按照上一章的方法，通过将准确率和运行时间放入一个公式中得到单数值矩阵看起来是不自然的：">
-<meta property="og:updated_time" content="2017-02-16T08:07:15.005Z">
+如按照上一章的方法，通过将准确率和运行时间放入一个公式中得到单数值度量看起来是不自然的：">
+<meta property="og:updated_time" content="2017-02-16T08:29:37.605Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MLY -- 9.Optimizing and satisficing metrics">
-<meta name="twitter:description" content="其实，还有一种组合多个评估矩阵的方法。假设，你将准确率和运行时间看做同等重要的评估项，你需要从以下三个分类器中选择一个：
+<meta name="twitter:description" content="其实，还有一种组合多个评价度量的方法。假设，你将准确率和运行时间看做同等重要的评价项，你需要从以下三个分类器中选择一个：
 
 
 
@@ -98,7 +98,7 @@ C
 
 
 
-如按照上一章的方法，通过将准确率和运行时间放入一个公式中得到单数值矩阵看起来是不自然的：">
+如按照上一章的方法，通过将准确率和运行时间放入一个公式中得到单数值度量看起来是不自然的：">
   
     <link rel="alternative" href="/atom.xml" title="mengmengmiao" type="application/atom+xml">
   
@@ -258,7 +258,7 @@ C
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>其实，还有一种组合多个评估矩阵的方法。<br>假设，你将准确率和运行时间看做同等重要的评估项，你需要从以下三个分类器中选择一个：</p>
+        <p>其实，还有一种组合多个评价度量的方法。<br>假设，你将准确率和运行时间看做同等重要的评价项，你需要从以下三个分类器中选择一个：</p>
 <table>
 <thead>
 <tr>
@@ -285,7 +285,7 @@ C
 </tr>
 </tbody>
 </table>
-<p>如按照上一章的方法，通过将准确率和运行时间放入一个公式中得到单数值矩阵看起来是不自然的：<br>                Accuracy -0.5*RunningTime<br>你可以这样做：首先，确定能接受的运行时间，例如运行时间在100ms内都是可接受的；然后，在满足运行时间这个条件下，最大化准确率。这里</p>
+<p>如按照上一章的方法，通过将准确率和运行时间放入一个公式中得到单数值度量看起来是不自然的：<br>                Accuracy -0.5*RunningTime<br>你可以这样做：首先，确定能接受的运行时间，例如运行时间在100ms内都是可接受的；然后，在满足运行时间这个条件下，最大化准确率。这里运行时间是一个“满意度量”——分类器只需要在“满意度量”下足够好，这意味着，你最多能花费100ms。准确率是“优化度量”。<br>如果你想平衡（trade off）N个评价项，例如模型的二进制文件大小、运行时间、准确率，你可能考虑设置N-1项评价为“满意度量”。换句话说，你只需要这N-1个评价度量们满足一个确定值。在这种情况下，你就可以定义最后一个评价为“优化度量”。例如，为二进制文件大小和运行时间设置一个阈值，然后在这些些约束条件下优化准确率。</p>
 
       
 

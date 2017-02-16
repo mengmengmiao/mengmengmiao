@@ -158,6 +158,68 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-MLY-10-Having-a-dev-set-and-metric-speeds-up-iterations" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/02/16/MLY-10-Having-a-dev-set-and-metric-speeds-up-iterations/">MLY -- 10.Having a dev set and metric speeds up iterations</a>
+    </h1>
+  
+
+        
+        <a href="/2017/02/16/MLY-10-Having-a-dev-set-and-metric-speeds-up-iterations/" class="archive-article-date">
+  	<time datetime="2017-02-16T09:23:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-16</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>很难事先知道什么算法最适合一个新问题。就算是经验丰富的机器学习研究人员通常也需要尝试一系列方法后才能发现满意的一些令人满意的方法。当构建一个机器学习系统时，我经常：<br>1.以一些如何构建系统的想法开始<br>2.用代码实现这些想法<br>3.做实验，实验会告诉我们哪些想法效果好。（通常，我开始的几个想法效果并不好）基于这些已学到的想法，我们回到第1步再产生更多想法，并循环下去。<br><img src="http://wx3.sinaimg.cn/mw1024/006FWFp1ly1fcsk2pg9rgj30cr089aax.jpg" alt="MLY-10"><br>上图就是迭代过程。这一圈你走的越快，你的进展就越快。这就是为什么开发集和测试集重要：当你尝试一个想法时，你可以在开发集上测量想法的表现，这能使你快速地发现是否你正在朝着正确的方向前进。<br>与此相对的是，假设你没有具体的开发集和度量（metric），每次你的团队开发一个新的猫分类器，就需要将这个分类器合并到你的app中，然后玩上几小时感觉一下新分类器是否有提升。这过程相当慢呀是不是？而且，当你的分类器从95.0%提升到95.1%时，你并不能通过玩app感觉出来这0.1%呀。拥有开发集和度量可以使你快速递检测出哪个想法会使分类集得到一点提升，从而使你快速判断出哪个想法需要再微调，哪个想法需要抛弃。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">翻译</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/02/16/MLY-10-Having-a-dev-set-and-metric-speeds-up-iterations/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
     <article id="post-MLY-9-Optimizing-and-satisficing-metrics" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -717,71 +779,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2017/01/25/Machine-Learning-Yearning-How-to-use-this-book-to-help-your-team/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-Machine-Learning-Yearning-Why-Machine-Learning-Strategy" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/01/25/Machine-Learning-Yearning-Why-Machine-Learning-Strategy/">MLY翻译 -- 1.Why Machine Learning Strategy?</a>
-    </h1>
-  
-
-        
-        <a href="/2017/01/25/Machine-Learning-Yearning-Why-Machine-Learning-Strategy/" class="archive-article-date">
-  	<time datetime="2017-01-25T13:42:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-01-25</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>机器学习是很多应用的基础，如网页搜索，反垃圾邮件，语音识别，推荐系统等。如果你的团队正在做一个基于机器学习的应用，这本书能够帮你的团队取得快速的进步。</p>
-<h2 id="一个例子：提供猫图片的创业公司"><a href="#一个例子：提供猫图片的创业公司" class="headerlink" title="一个例子：提供猫图片的创业公司"></a>一个例子：提供猫图片的创业公司</h2><p>假如你现在正在创建一个为猫奴提供很多猫图片的公司，你用神经网络建立一个从图片中检测猫的计算机视觉系统。但悲剧的是，你发现你的学习算法精度不够，面临提高猫检测器精度的巨大压力，你要怎么做？<br>你的小团队很给力，他们提出以下解决问题的方向：<br>
-        
-          <a class="article-more-a" href="/2017/01/25/Machine-Learning-Yearning-Why-Machine-Learning-Strategy/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">翻译</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/01/25/Machine-Learning-Yearning-Why-Machine-Learning-Strategy/">展开全文 >></a>
         </p>
       
 

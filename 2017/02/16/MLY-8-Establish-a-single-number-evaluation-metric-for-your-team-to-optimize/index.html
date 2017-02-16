@@ -14,7 +14,7 @@
 <meta property="og:url" content="https://mengmengmiao.github.io/2017/02/16/MLY-8-Establish-a-single-number-evaluation-metric-for-your-team-to-optimize/index.html">
 <meta property="og:site_name" content="mengmengmiao">
 <meta property="og:description" content="分类准确率(classification accuracy)是一个单数值的评估矩阵：将开发集（或测试集）输入分类器分类，分类器返回“被分类器正确分类的数据占输入数据集的比例”。如果分类器A获得97%的准确率，分类器B获得90%的准确率费，根据评估矩阵，分类器A较好。">
-<meta property="og:updated_time" content="2017-02-16T07:24:06.679Z">
+<meta property="og:updated_time" content="2017-02-16T07:26:24.149Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MLY -- 8.Establish a single-number evaluation metric for your team to optimize">
 <meta name="twitter:description" content="分类准确率(classification accuracy)是一个单数值的评估矩阵：将开发集（或测试集）输入分类器分类，分类器返回“被分类器正确分类的数据占输入数据集的比例”。如果分类器A获得97%的准确率，分类器B获得90%的准确率费，根据评估矩阵，分类器A较好。">
@@ -227,7 +227,8 @@
 </tbody>
 </table>
 <p>单数值评估矩阵能让你从众多算法中快速选出哪个算法最优，它对众多算法进行偏好排序，因而明确了进展的方向。</p>
-<p>最后，假设你分别在四个主要市场（(i)US,(ii)China,(iii)India,(iv)其他）跟踪你的猫分类器准确率，因此你得到四个矩阵。对这四个矩阵取平均或加权平均值，你就会得到一个评估数值。取平均或加权平均是将多个矩阵变成一个的最常用的方法。<br>注释：<br> 精确率和召回率：以猫图片分类器为例，精确率是指在分类器分类成猫的图片中，真的是猫图片的比例。召回率是指在开发集（或测试集）中的猫图片被分类器分类成猫图片的概率。在高准确率和高召回率间，经常需要权衡（tradeoff）。<br> F1 score： 如果你想了解更多，可以点击 <a href="https://en.wikipedia.org/wiki/F1_score" target="_blank" rel="external">https://en.wikipedia.org/wiki/F1_score</a>。F1 score就是精确率和准确率的几何平均值，是这样计算的 2/((1/precision)+(1/recall))。</p>
+<p>最后，假设你分别在四个主要市场（(i)US,(ii)China,(iii)India,(iv)其他）跟踪你的猫分类器准确率，因此你得到四个矩阵。对这四个矩阵取平均或加权平均值，你就会得到一个评估数值。取平均或加权平均是将多个矩阵变成一个的最常用的方法。</p>
+<p>##注释：##<br> 精确率和召回率：以猫图片分类器为例，精确率是指在分类器分类成猫的图片中，真的是猫图片的比例。召回率是指在开发集（或测试集）中的猫图片被分类器分类成猫图片的概率。在高准确率和高召回率间，经常需要权衡（tradeoff）。<br> F1 score： 如果你想了解更多，可以点击 <a href="https://en.wikipedia.org/wiki/F1_score" target="_blank" rel="external">https://en.wikipedia.org/wiki/F1_score</a>。F1 score就是精确率和准确率的几何平均值，是这样计算的 2/((1/precision)+(1/recall))。</p>
 
       
 

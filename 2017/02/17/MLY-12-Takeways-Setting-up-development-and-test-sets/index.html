@@ -6,18 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://mengmengmiao.github.io">
-  <title>MLY -- 5.your development and test sets | mengmengmiao</title>
+  <title>MLY -- 12.Takeways:Setting up development and test sets | mengmengmiao</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="让我们回想一下猫图片那个例子：你们公司运行一个手机app，用户往app上上传许多不同物体的图片，而你想从这些图片中让机器自动找到猫图片。你的团队从不同的网站上获得了包含猫的图片（正样例）和不包含猫的图片（负样例）。然后将70%的图片用作训练集，30%的图片用作测试集。使用这些图片，你的团队构建了一个猫检测器，这个检测器在训练集和测试集上表现很好。但是，当你将这个分类器发布到移动端app时，其表现却">
+  <meta name="description" content="love life">
 <meta property="og:type" content="article">
-<meta property="og:title" content="MLY -- 5.your development and test sets">
-<meta property="og:url" content="https://mengmengmiao.github.io/2017/01/28/MLY-5-your-development-and-test-sets/index.html">
+<meta property="og:title" content="MLY -- 12.Takeways:Setting up development and test sets">
+<meta property="og:url" content="https://mengmengmiao.github.io/2017/02/17/MLY-12-Takeways-Setting-up-development-and-test-sets/index.html">
 <meta property="og:site_name" content="mengmengmiao">
-<meta property="og:description" content="让我们回想一下猫图片那个例子：你们公司运行一个手机app，用户往app上上传许多不同物体的图片，而你想从这些图片中让机器自动找到猫图片。你的团队从不同的网站上获得了包含猫的图片（正样例）和不包含猫的图片（负样例）。然后将70%的图片用作训练集，30%的图片用作测试集。使用这些图片，你的团队构建了一个猫检测器，这个检测器在训练集和测试集上表现很好。但是，当你将这个分类器发布到移动端app时，其表现却">
-<meta property="og:updated_time" content="2017-01-29T10:19:12.757Z">
+<meta property="og:description" content="love life">
+<meta property="og:updated_time" content="2017-02-17T09:09:16.349Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="MLY -- 5.your development and test sets">
-<meta name="twitter:description" content="让我们回想一下猫图片那个例子：你们公司运行一个手机app，用户往app上上传许多不同物体的图片，而你想从这些图片中让机器自动找到猫图片。你的团队从不同的网站上获得了包含猫的图片（正样例）和不包含猫的图片（负样例）。然后将70%的图片用作训练集，30%的图片用作测试集。使用这些图片，你的团队构建了一个猫检测器，这个检测器在训练集和测试集上表现很好。但是，当你将这个分类器发布到移动端app时，其表现却">
+<meta name="twitter:title" content="MLY -- 12.Takeways:Setting up development and test sets">
+<meta name="twitter:description" content="love life">
   
     <link rel="alternative" href="/atom.xml" title="mengmengmiao" type="application/atom+xml">
   
@@ -157,36 +157,27 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-MLY-5-your-development-and-test-sets" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-MLY-12-Takeways-Setting-up-development-and-test-sets" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      MLY -- 5.your development and test sets
+      MLY -- 12.Takeways:Setting up development and test sets
     </h1>
   
 
         
-        <a href="/2017/01/28/MLY-5-your-development-and-test-sets/" class="archive-article-date">
-  	<time datetime="2017-01-28T02:52:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-01-28</time>
+        <a href="/2017/02/17/MLY-12-Takeways-Setting-up-development-and-test-sets/" class="archive-article-date">
+  	<time datetime="2017-02-17T09:07:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-17</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>让我们回想一下猫图片那个例子：你们公司运行一个手机app，用户往app上上传许多不同物体的图片，而你想从这些图片中让机器自动找到猫图片。<br>你的团队从不同的网站上获得了包含猫的图片（正样例）和不包含猫的图片（负样例）。然后将70%的图片用作训练集，30%的图片用作测试集。使用这些图片，你的团队构建了一个猫检测器，这个检测器在训练集和测试集上表现很好。<br>但是，当你将这个分类器发布到移动端app时，其表现却很差。<br><a id="more"></a><br>为什么会这样？<br>你发现用户上传的图片与组成训练集的图片有不同的外观：用户上传的图片是用手机拍摄的，因此图片分辨率较低，模糊，并且光线不太理想。因你的训练/测试集都是由网站上的图片组成的，所以由训练集训练除的算法不能很好地泛化到手机图片的<strong>分布</strong>。<br>在大数据时代之前，在机器学习中，随机70%/30%分割数据集为训练集和测试集是一个常见规则。这种规则可行，但是，在越来越多的“训练时的分布（例如上例网站图片）和最终关心的问题的分布（上例的手机图片）是不同的”应用上， 这种规则却不是一个好主意。<br>我们通常定义：</p>
-<blockquote>
-<ul>
-<li><strong>训练集</strong> – 用来训练你的学习算法</li>
-<li><strong>开发集(development set)</strong> – 用来调整参数，选择特征，根据学习算法做出其他决定。有时也叫<strong>hold-out交叉验证集</strong>。</li>
-<li><strong>测试集</strong> – 用来评价学习算法的表现，不能将其用于对学习算法和算法参数的选择。</li>
-</ul>
-</blockquote>
-<p>一旦你们定义里开发集和测试集，你的团队就可以尝试不同的ideas（例如，不同的学习算法参数），从而发现哪种ideas表现最好。开发集和测试集能使你的团队快速地看到你们的学习算法表现的怎么样。<br>换句话来说，<strong>开发集和测试集能指引你的团队对机器学习系统做出最重要的改变</strong>。<br>所以，你应该做到：<br>　　选择的开发集和测试集能够反映你期望将来能得到的并且算法在上面表现不错的数据的特点。<br>换句话说，你的测试集不应该只是可利用的数据的30%，特别是将来的数据（移动端app图像）和你的训练数据（网站图像）不同时。<br>如果你还没有发布app，没有用户的你可能不能得到能够精确反映算法将来处理的数据的数据集。但是，你可以尝试得到一些近似数据。例如，拉上你的亲朋好友，让他们用手机拍照片并传给你。一旦你的app发布了，你就能够根据用户的数据更新你的开发/测试数据集啦！<br>假如，你没有任何途径能够得到一些近似数据，你也可以使用网站图像先开始。但你应该意识到，这会导致系统的泛化能力不好。<br>我们需要判断一下，在构建很棒的开发集和测试集上应该投资多少。但是不要妄想训练时的分布和测试的分布相同。尝试挑选能够反映“算法最终能在其上表现好的数据”的样例，而不是你碰巧得到的什么数据（这里的for training应该理解成整个训练过程，包括训练，交叉验证和测试）。</p>
-
+        
       
 
       
@@ -286,7 +277,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=https://mengmengmiao.github.io/2017/01/28/MLY-5-your-development-and-test-sets/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=https://mengmengmiao.github.io/2017/02/17/MLY-12-Takeways-Setting-up-development-and-test-sets/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -300,18 +291,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2017/01/28/MLY-6-Your-dev-and-test-sets-should-come-from-the-same-distribution/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2027/01/25/this-is-meng/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          MLY -- 6.Your dev and test sets should come from the same distribution
+          MLY翻译 -- Machine Learning Yearning 目录
         
       </div>
     </a>
   
   
-    <a href="/2017/01/27/MLY-Scale-drivers-machine-learning-progress/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">MLY翻译 -- 4.Scale drivers machine learning progress</div>
+    <a href="/2017/02/17/MLY-11-When-to-change-dev-test-sets-and-metrics/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">MLY -- 11.When to change dev/test sets and metrics</div>
       <i class="icon-circle-right"></i>
     </a>
   

@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="https://mengmengmiao.github.io">
   <title>MLY -- 10.Having a dev set and metric speeds up iterations | mengmengmiao</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="很难事先知道什么算法最适合一个新问题。就算是经验丰富的机器学习研究人员通常也需要尝试一系列方法后才能发现满意的一些令人满意的方法。当构建一个机器学习系统时，我经常：1.以一些如何构建系统的想法开始2.用代码实现这些想法3.做实验，实验会告诉我们哪些想法效果好。（通常，我开始的几个想法效果并不好）基于这些已学到的想法，我们回到第1步再产生更多想法，并循环下去。上图就是迭代过程。这一圈你走的越快，你的">
+  <meta name="description" content="很难事先知道什么算法最适合一个新问题。就算是经验丰富的机器学习研究人员通常也需要尝试一系列方法后才能发现一些令人满意的方法。当构建一个机器学习系统时，我经常：">
 <meta property="og:type" content="article">
 <meta property="og:title" content="MLY -- 10.Having a dev set and metric speeds up iterations">
 <meta property="og:url" content="https://mengmengmiao.github.io/2017/02/16/MLY-10-Having-a-dev-set-and-metric-speeds-up-iterations/index.html">
 <meta property="og:site_name" content="mengmengmiao">
-<meta property="og:description" content="很难事先知道什么算法最适合一个新问题。就算是经验丰富的机器学习研究人员通常也需要尝试一系列方法后才能发现满意的一些令人满意的方法。当构建一个机器学习系统时，我经常：1.以一些如何构建系统的想法开始2.用代码实现这些想法3.做实验，实验会告诉我们哪些想法效果好。（通常，我开始的几个想法效果并不好）基于这些已学到的想法，我们回到第1步再产生更多想法，并循环下去。上图就是迭代过程。这一圈你走的越快，你的">
+<meta property="og:description" content="很难事先知道什么算法最适合一个新问题。就算是经验丰富的机器学习研究人员通常也需要尝试一系列方法后才能发现一些令人满意的方法。当构建一个机器学习系统时，我经常：">
 <meta property="og:image" content="http://wx3.sinaimg.cn/mw1024/006FWFp1ly1fcsk2pg9rgj30cr089aax.jpg">
-<meta property="og:updated_time" content="2017-02-16T12:39:14.360Z">
+<meta property="og:updated_time" content="2017-02-17T04:27:22.215Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MLY -- 10.Having a dev set and metric speeds up iterations">
-<meta name="twitter:description" content="很难事先知道什么算法最适合一个新问题。就算是经验丰富的机器学习研究人员通常也需要尝试一系列方法后才能发现满意的一些令人满意的方法。当构建一个机器学习系统时，我经常：1.以一些如何构建系统的想法开始2.用代码实现这些想法3.做实验，实验会告诉我们哪些想法效果好。（通常，我开始的几个想法效果并不好）基于这些已学到的想法，我们回到第1步再产生更多想法，并循环下去。上图就是迭代过程。这一圈你走的越快，你的">
+<meta name="twitter:description" content="很难事先知道什么算法最适合一个新问题。就算是经验丰富的机器学习研究人员通常也需要尝试一系列方法后才能发现一些令人满意的方法。当构建一个机器学习系统时，我经常：">
 <meta name="twitter:image" content="http://wx3.sinaimg.cn/mw1024/006FWFp1ly1fcsk2pg9rgj30cr089aax.jpg">
   
     <link rel="alternative" href="/atom.xml" title="mengmengmiao" type="application/atom+xml">
@@ -179,7 +179,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>很难事先知道什么算法最适合一个新问题。就算是经验丰富的机器学习研究人员通常也需要尝试一系列方法后才能发现满意的一些令人满意的方法。当构建一个机器学习系统时，我经常：<br>1.以一些如何构建系统的想法开始<br>2.用代码实现这些想法<br>3.做实验，实验会告诉我们哪些想法效果好。（通常，我开始的几个想法效果并不好）基于这些已学到的想法，我们回到第1步再产生更多想法，并循环下去。<br><img src="http://wx3.sinaimg.cn/mw1024/006FWFp1ly1fcsk2pg9rgj30cr089aax.jpg" alt="MLY-10"><br>上图就是迭代过程。这一圈你走的越快，你的进展就越快。这就是为什么开发集和测试集重要：当你尝试一个想法时，你可以在开发集上测量想法的表现，这能使你快速地发现是否你正在朝着正确的方向前进。<br>与此相对的是，假设你没有具体的开发集和度量（metric），每次你的团队开发一个新的猫分类器，就需要将这个分类器合并到你的app中，然后玩上几小时感觉一下新分类器是否有提升。这过程相当慢呀是不是？而且，当你的分类器从95.0%提升到95.1%时，你并不能通过玩app感觉出来这0.1%呀。拥有开发集和度量可以使你快速递检测出哪个想法会使分类集得到一点提升，从而使你快速判断出哪个想法需要再微调，哪个想法需要抛弃。</p>
+        <p>很难事先知道什么算法最适合一个新问题。就算是经验丰富的机器学习研究人员通常也需要尝试一系列方法后才能发现一些令人满意的方法。当构建一个机器学习系统时，我经常：<br><a id="more"></a><br>1.以一些如何构建系统的想法开始<br>2.用代码实现这些想法<br>3.做实验，实验会告诉我们哪些想法效果好。（通常，我开始的几个想法效果并不好）基于这些已学到的想法，我们回到第1步再产生更多想法，并循环下去。<br><img src="http://wx3.sinaimg.cn/mw1024/006FWFp1ly1fcsk2pg9rgj30cr089aax.jpg" alt="MLY-10"><br>上图就是迭代过程。这一圈你走的越快，你的进展就越快。这就是为什么开发集和测试集重要：当你尝试一个想法时，你可以在开发集上测量想法的表现，这能使你快速地发现是否你正在朝着正确的方向前进。<br>与此相对的是，假设你没有具体的开发集和度量（metric），每次你的团队开发一个新的猫分类器，就需要将这个分类器合并到你的app中，然后玩上几小时感觉一下新分类器是否有提升。这过程相当慢呀是不是？而且，当你的分类器从95.0%提升到95.1%时，你并不能通过玩app感觉出来这0.1%呀。拥有开发集和度量可以使你快速递检测出哪个想法会使分类集得到一点提升，从而使你快速判断出哪个想法需要再微调，哪个想法需要抛弃。</p>
 
       
 
@@ -294,6 +294,15 @@
   
 <nav id="article-nav">
   
+    <a href="/2017/02/17/MLY-11-When-to-change-dev-test-sets-and-metrics/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          MLY -- 11.When to change dev/test sets and metrics
+        
+      </div>
+    </a>
+  
   
     <a href="/2017/02/16/MLY-9-Optimizing-and-satisficing-metrics/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title">MLY -- 9.Optimizing and satisficing metrics</div>
@@ -401,6 +410,10 @@
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">翻译</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">����</a>
               </li>
              
               <li class="article-tag-list-item">

@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="https://mengmengmiao.github.io">
   <title>MLY -- 6.Your dev and test sets should come from the same distribution | mengmengmiao</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="根据你app应用的市场：（i）US，（ii）China，（iii）India，（iv）Other，你将猫图片数据分为四个部分。若想要一个开发集和一个测试集时，我们可以随机地选两个作为开发集，剩下的两个作为测试集。例如，可以选US和India作为开发集，China和Other作为测试集。一旦确定好了开发集和测试集，你的小团队将专注于提高学习算法在开发集上的表现。因此，开发集应该反映你想要改进的任务：">
+  <meta name="description" content="根据你app应用的市场：（i）US，（ii）China，（iii）India，（iv）Other，你将猫图片数据分为四个部分。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="MLY -- 6.Your dev and test sets should come from the same distribution">
 <meta property="og:url" content="https://mengmengmiao.github.io/2017/01/28/MLY-6-Your-dev-and-test-sets-should-come-from-the-same-distribution/index.html">
 <meta property="og:site_name" content="mengmengmiao">
-<meta property="og:description" content="根据你app应用的市场：（i）US，（ii）China，（iii）India，（iv）Other，你将猫图片数据分为四个部分。若想要一个开发集和一个测试集时，我们可以随机地选两个作为开发集，剩下的两个作为测试集。例如，可以选US和India作为开发集，China和Other作为测试集。一旦确定好了开发集和测试集，你的小团队将专注于提高学习算法在开发集上的表现。因此，开发集应该反映你想要改进的任务：">
+<meta property="og:description" content="根据你app应用的市场：（i）US，（ii）China，（iii）India，（iv）Other，你将猫图片数据分为四个部分。">
 <meta property="og:image" content="http://wx3.sinaimg.cn/mw690/006FWFp1ly1fc8tsfaqhaj308606sq3q.jpg">
-<meta property="og:updated_time" content="2017-01-30T13:48:45.980Z">
+<meta property="og:updated_time" content="2017-02-17T12:26:30.362Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MLY -- 6.Your dev and test sets should come from the same distribution">
-<meta name="twitter:description" content="根据你app应用的市场：（i）US，（ii）China，（iii）India，（iv）Other，你将猫图片数据分为四个部分。若想要一个开发集和一个测试集时，我们可以随机地选两个作为开发集，剩下的两个作为测试集。例如，可以选US和India作为开发集，China和Other作为测试集。一旦确定好了开发集和测试集，你的小团队将专注于提高学习算法在开发集上的表现。因此，开发集应该反映你想要改进的任务：">
+<meta name="twitter:description" content="根据你app应用的市场：（i）US，（ii）China，（iii）India，（iv）Other，你将猫图片数据分为四个部分。">
 <meta name="twitter:image" content="http://wx3.sinaimg.cn/mw690/006FWFp1ly1fc8tsfaqhaj308606sq3q.jpg">
   
     <link rel="alternative" href="/atom.xml" title="mengmengmiao" type="application/atom+xml">
@@ -179,7 +179,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>根据你app应用的市场：（i）US，（ii）China，（iii）India，（iv）Other，你将猫图片数据分为四个部分。<br>若想要一个开发集和一个测试集时，我们可以随机地选两个作为开发集，剩下的两个作为测试集。例如，可以选US和India作为开发集，China和Other作为测试集。<br><img src="http://wx3.sinaimg.cn/mw690/006FWFp1ly1fc8tsfaqhaj308606sq3q.jpg" alt="wrong"><br>一旦确定好了开发集和测试集，你的小团队将专注于提高学习算法在开发集上的表现。因此，开发集应该反映你想要改进的任务：在四个地理位置上表现都好，而不是两个。<br><a id="more"></a><br>此外，当开发集和测试集分布不同时，还会有问题：有可能你的团队将要构建一个在开发集上表现很好的东西，却发现这个东西在测试集上表现的很差。这种结果有多挫败和浪费精力，避免让它发生在你身上吧。<br>举个例子：假设你的团队做出的系统在开发集上表现很好，而在测试集上却表现不佳。如果你的开发集和测试集来自于用一个分布，那么你会知道是过拟合开发集(是否还有可能是训练集过拟合？)了，此时明显的解决办法就是获得更多开发集数据。<br>但是，若开发集和测试集来自不同的分布，那么就不容易找到解决方向了。有几个导致在测试集上表现不佳的原因：</p>
+        <p>根据你app应用的市场：（i）US，（ii）China，（iii）India，（iv）Other，你将猫图片数据分为四个部分。<br><a id="more"></a><br>若想要一个开发集和一个测试集时，我们可以随机地选两个作为开发集，剩下的两个作为测试集。例如，可以选US和India作为开发集，China和Other作为测试集。<br><img src="http://wx3.sinaimg.cn/mw690/006FWFp1ly1fc8tsfaqhaj308606sq3q.jpg" alt="wrong"><br>一旦确定好了开发集和测试集，你的小团队将专注于提高学习算法在开发集上的表现。因此，开发集应该反映你想要改进的任务：在四个地理位置上表现都好，而不是两个。<br>此外，当开发集和测试集分布不同时，还会有问题：有可能你的团队将要构建一个在开发集上表现很好的东西，却发现这个东西在测试集上表现的很差。这种结果有多挫败和浪费精力，避免让它发生在你身上吧。<br>举个例子：假设你的团队做出的系统在开发集上表现很好，而在测试集上却表现不佳。如果你的开发集和测试集来自于用一个分布，那么你会知道是过拟合开发集(是否还有可能是训练集过拟合？)了，此时明显的解决办法就是获得更多开发集数据。<br>但是，若开发集和测试集来自不同的分布，那么就不容易找到解决方向了。有几个导致在测试集上表现不佳的原因：</p>
 <ol>
 <li>过拟合开发集</li>
 <li>测试集比开发集更严格。此时你的算法可能跟预期的一样好了，没有能改进很多的方法了</li>

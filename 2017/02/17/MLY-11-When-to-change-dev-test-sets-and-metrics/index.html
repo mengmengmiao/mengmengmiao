@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="https://mengmengmiao.github.io">
   <title>MLY -- 11.When to change dev/test sets and metrics | mengmengmiao</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="当开始做一个新项目时，我会快速选择开发集和测试集，因为这会给团队一个明确的目标。通常，我会要求我的团队在一周之内提出初始的开发集、测试集和度量，大多时候都不会多于一周。先提出一些不完美的东西使项目能前进下去，比过多考虑开发集、测试集、度量好的多。但是，一周时间线并不适用于成熟的应用。例如，垃圾邮件是一个成熟的深度学习应用。我曾见到在已经很成熟的系统上工作的团队花费数月的时间去好点儿的开发/测试集。">
+  <meta name="description" content="当开始做一个新项目时，我会快速选择开发集和测试集，因为这会给团队一个明确的目标。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="MLY -- 11.When to change dev/test sets and metrics">
 <meta property="og:url" content="https://mengmengmiao.github.io/2017/02/17/MLY-11-When-to-change-dev-test-sets-and-metrics/index.html">
 <meta property="og:site_name" content="mengmengmiao">
-<meta property="og:description" content="当开始做一个新项目时，我会快速选择开发集和测试集，因为这会给团队一个明确的目标。通常，我会要求我的团队在一周之内提出初始的开发集、测试集和度量，大多时候都不会多于一周。先提出一些不完美的东西使项目能前进下去，比过多考虑开发集、测试集、度量好的多。但是，一周时间线并不适用于成熟的应用。例如，垃圾邮件是一个成熟的深度学习应用。我曾见到在已经很成熟的系统上工作的团队花费数月的时间去好点儿的开发/测试集。">
+<meta property="og:description" content="当开始做一个新项目时，我会快速选择开发集和测试集，因为这会给团队一个明确的目标。">
 <meta property="og:image" content="http://wx4.sinaimg.cn/mw690/006FWFp1ly1fctfpfl4maj30gj0begto.jpg">
-<meta property="og:updated_time" content="2017-02-17T06:17:27.130Z">
+<meta property="og:updated_time" content="2017-02-17T08:16:13.530Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MLY -- 11.When to change dev/test sets and metrics">
-<meta name="twitter:description" content="当开始做一个新项目时，我会快速选择开发集和测试集，因为这会给团队一个明确的目标。通常，我会要求我的团队在一周之内提出初始的开发集、测试集和度量，大多时候都不会多于一周。先提出一些不完美的东西使项目能前进下去，比过多考虑开发集、测试集、度量好的多。但是，一周时间线并不适用于成熟的应用。例如，垃圾邮件是一个成熟的深度学习应用。我曾见到在已经很成熟的系统上工作的团队花费数月的时间去好点儿的开发/测试集。">
+<meta name="twitter:description" content="当开始做一个新项目时，我会快速选择开发集和测试集，因为这会给团队一个明确的目标。">
 <meta name="twitter:image" content="http://wx4.sinaimg.cn/mw690/006FWFp1ly1fctfpfl4maj30gj0begto.jpg">
   
     <link rel="alternative" href="/atom.xml" title="mengmengmiao" type="application/atom+xml">
@@ -179,7 +179,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>当开始做一个新项目时，我会快速选择开发集和测试集，因为这会给团队一个明确的目标。<br>通常，我会要求我的团队在一周之内提出初始的开发集、测试集和度量，大多时候都不会多于一周。先提出一些不完美的东西使项目能前进下去，比过多考虑开发集、测试集、度量好的多。但是，一周时间线并不适用于成熟的应用。例如，垃圾邮件是一个成熟的深度学习应用。我曾见到在已经很成熟的系统上工作的团队花费数月的时间去好点儿的开发/测试集。<br>如果在后续开发中，你发现初始开发集、测试集、度量错过了标记（missed the mark），一定要快速地改进。例如，如果你的开发集+度量使分类器A得分优于分类器B，但是你的团队认为分类器B实际上对你的产品更好，那么这就可能就是你需要改进你的开发集、测试集或者度量的时候了。<br><u>1.实际的分布和开发集、测试集的分布不同</u><br>假设你初始的开发/测试集主要由成年猫的图片组成。当发布了app后，出乎意料，你发现用户会上传很多幼年猫的图片。此时，开发/测试集的分布就不能代表实际的分布了。在这种情况下，你需要更新开发/测试集，使其更具代表性。<br><img src="http://wx4.sinaimg.cn/mw690/006FWFp1ly1fctfpfl4maj30gj0begto.jpg" alt="MLY-11"><br><u>2.过拟合开发集了</u></p>
+        <p>当开始做一个新项目时，我会快速选择开发集和测试集，因为这会给团队一个明确的目标。<br><a id="more"></a><br>通常，我会要求我的团队在一周之内提出初始的开发集、测试集和度量，大多时候都不会多于一周。先提出一些不完美的东西使项目能前进下去，比过多考虑开发集、测试集、度量好的多。但是，一周时间线并不适用于成熟的应用。例如，垃圾邮件是一个成熟的深度学习应用。我曾见到在已经很成熟的系统上工作的团队花费数月的时间去好点儿的开发/测试集。<br>如果在后续开发中，你发现初始开发集、测试集、度量错过了标记（missed the mark），一定要快速地改进。例如，如果你的开发集+度量使分类器A得分优于分类器B，但是你的团队认为分类器B实际上对你的产品更好，那么这就可能就是你需要改进你的开发集、测试集或者度量的时候了。<br><u>1.实际的分布和开发集、测试集的分布不同</u><br>假设你初始的开发/测试集主要由成年猫的图片组成。当发布了app后，出乎意料，你发现用户会上传很多幼年猫的图片。此时，开发/测试集的分布就不能代表实际的分布了。在这种情况下，你需要更新开发/测试集，使其更具代表性。<br><img src="http://wx4.sinaimg.cn/mw690/006FWFp1ly1fctfpfl4maj30gj0begto.jpg" alt="MLY-11"><br><u>2.过拟合开发集了</u><br>重复地用开发集来评价ideas可能导致过拟合开发集。当项目开发结束时，需要在测试集上评估你的系统。如果你发现的开发集的表现比测试集好，那么这可能就是过拟合开发集了。在这种情况下，你需要一个新的开发集（a fresh dev set）。<br>如果你需要跟踪团队的进展，你可以用测试集定期评估你的系统（例如每周一次或每月一次）。但是不要用测试集做任何关于算法的决策，包括是否要回滚到上一个系统。如果你这么做了，系统将会开始过拟合测试集。并且不能再依赖测试集给出系统性能的完全无偏评估（当你发表论文或使用这个评估去做商业决策时就需要完全无偏评估）。<br><u>3.度量（the metric）中包括项目需要优化的以外的东西</u><br>假设对于猫分类器，你选择了分类准确度（classification accuracy）作为度量（metric），</p>
 
       
 

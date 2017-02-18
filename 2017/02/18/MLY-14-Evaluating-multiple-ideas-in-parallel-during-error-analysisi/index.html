@@ -18,7 +18,14 @@
 
 
 你可以并行地评估所有这些点子。我通常创建一个电子表格，并在查看这100张误分类开发集图片时填写这张表格，并记下有助于我记起具体是哪个例子的评论。下面用四个图片来演示我是怎么做的：
-| image | dog | great cat | blur">
+
+
+
+image
+dog
+great cat
+blurry
+co">
 <meta property="og:type" content="article">
 <meta property="og:title" content="MLY -- 14.Evaluating multiple ideas in parallel during error analysis">
 <meta property="og:url" content="https://mengmengmiao.github.io/2017/02/18/MLY-14-Evaluating-multiple-ideas-in-parallel-during-error-analysisi/index.html">
@@ -33,8 +40,15 @@
 
 
 你可以并行地评估所有这些点子。我通常创建一个电子表格，并在查看这100张误分类开发集图片时填写这张表格，并记下有助于我记起具体是哪个例子的评论。下面用四个图片来演示我是怎么做的：
-| image | dog | great cat | blur">
-<meta property="og:updated_time" content="2017-02-18T08:14:07.783Z">
+
+
+
+image
+dog
+great cat
+blurry
+co">
+<meta property="og:updated_time" content="2017-02-18T08:14:50.212Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MLY -- 14.Evaluating multiple ideas in parallel during error analysis">
 <meta name="twitter:description" content="你的团队有提高猫检测器的几个点子：
@@ -47,7 +61,14 @@
 
 
 你可以并行地评估所有这些点子。我通常创建一个电子表格，并在查看这100张误分类开发集图片时填写这张表格，并记下有助于我记起具体是哪个例子的评论。下面用四个图片来演示我是怎么做的：
-| image | dog | great cat | blur">
+
+
+
+image
+dog
+great cat
+blurry
+co">
   
     <link rel="alternative" href="/atom.xml" title="mengmengmiao" type="application/atom+xml">
   
@@ -217,7 +238,54 @@
 </ul>
 </blockquote>
 <p>你可以并行地评估所有这些点子。我通常创建一个电子表格，并在查看这100张误分类开发集图片时填写这张表格，并记下有助于我记起具体是哪个例子的评论。下面用四个图片来演示我是怎么做的：</p>
-<p>| image | dog | great cat | blurry | comments |<br>| - | - | - | - | -： |<br>|1|&radic;|||不平常的斗牛犬颜色|<br>|2|||&radic;||<br>|3||&radic;|&radic;|狮子;雨天在动物园拍摄的照片|<br>|4||&radic;||树后面的豹|<br>|% of total|25%|50%|50%| |<br>上面的图片3既是大猫又是模糊图片：一个例子可以属于多种类别。这就是为什么表格底部的百分数加起来不等于100%的原因。<br>虽然在上述描述过程中，我首先确定类别（狗，大猫，模糊图片），然后将误分类图片分到每个类别中，在实际中，一旦你开始查看那些抽取的误分类图片，你可能会被启发从而提出新的类别。例如，你在查看了是几个图片后，意识到很多误分类图片是被Instagram过滤器预处理过后的图片。此时，你就可以在电子表格上加上Instagram一栏了。人工查看误分类图片，并在查看时问问自己如何/是否能够给出这些图片的正确标签，将能启发你提出新的错误类别和解决方案。<br>最有用的错误类别是针对它你已有了提升方案的类别。例如，Instagram类别将是最有用的如果你有了一个“撤销”Instagram过滤器将图片恢复到原始图片的方法。但你不必纠结于已经有了改进想法的错误类别；<span color="blue">错误分析阶段的目标是建立你关于“哪个领域是最有前途的最值得关注”的直觉。</span><br>错误分析是一个迭代过程。你可以从没有任何类别开始。通过查看图像，你可能会想出一些关于错误类别的方法。然后，在对一些图片手工分类后，你可能会受到启发并提出新的类别，然后返回按照新类别重新检查图片，重复此循环。<br>假设你完成了100个误分类开发集图片的错误分析，并得到：</p>
+<table>
+<thead>
+<tr>
+<th>image</th>
+<th>dog</th>
+<th>great cat</th>
+<th>blurry</th>
+<th>comments</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>&radic;</td>
+<td></td>
+<td></td>
+<td>不平常的斗牛犬颜色</td>
+</tr>
+<tr>
+<td>2</td>
+<td></td>
+<td></td>
+<td>&radic;</td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td></td>
+<td>&radic;</td>
+<td>&radic;</td>
+<td>狮子;雨天在动物园拍摄的照片</td>
+</tr>
+<tr>
+<td>4</td>
+<td></td>
+<td>&radic;</td>
+<td></td>
+<td>树后面的豹</td>
+</tr>
+<tr>
+<td>% of total</td>
+<td>25%</td>
+<td>50%</td>
+<td>50%</td>
+</tr>
+</tbody>
+</table>
+<p>上面的图片3既是大猫又是模糊图片：一个例子可以属于多种类别。这就是为什么表格底部的百分数加起来不等于100%的原因。<br>虽然在上述描述过程中，我首先确定类别（狗，大猫，模糊图片），然后将误分类图片分到每个类别中，在实际中，一旦你开始查看那些抽取的误分类图片，你可能会被启发从而提出新的类别。例如，你在查看了是几个图片后，意识到很多误分类图片是被Instagram过滤器预处理过后的图片。此时，你就可以在电子表格上加上Instagram一栏了。人工查看误分类图片，并在查看时问问自己如何/是否能够给出这些图片的正确标签，将能启发你提出新的错误类别和解决方案。<br>最有用的错误类别是针对它你已有了提升方案的类别。例如，Instagram类别将是最有用的如果你有了一个“撤销”Instagram过滤器将图片恢复到原始图片的方法。但你不必纠结于已经有了改进想法的错误类别；<span color="blue">错误分析阶段的目标是建立你关于“哪个领域是最有前途的最值得关注”的直觉。</span><br>错误分析是一个迭代过程。你可以从没有任何类别开始。通过查看图像，你可能会想出一些关于错误类别的方法。然后，在对一些图片手工分类后，你可能会受到启发并提出新的类别，然后返回按照新类别重新检查图片，重复此循环。<br>假设你完成了100个误分类开发集图片的错误分析，并得到：</p>
 <table>
 <thead>
 <tr>

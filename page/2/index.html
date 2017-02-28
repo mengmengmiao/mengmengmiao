@@ -158,6 +158,69 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-MLY-7-How-large-do-the-dev-test-sets-need-to-be" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/01/30/MLY-7-How-large-do-the-dev-test-sets-need-to-be/">MLY -- 7.How large do the dev/test sets need to be?</a>
+    </h1>
+  
+
+        
+        <a href="/2017/01/30/MLY-7-How-large-do-the-dev-test-sets-need-to-be/" class="archive-article-date">
+  	<time datetime="2017-01-30T13:12:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-01-30</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>开发集应该足够大，大到可以检测出多个算法之间的不同。例如，分类器A的分类精度是90.0%，分类器B的精度为90.1%，开发集有100个样例，则开发集不能检测出这0.1%的不同<font color="#D2691E">（将开发集输入分类器A、B进行分类，A、B的结果都是90个样例的类标签正确，所以不能区分A、B）</font>。就我所见过的机器学习问题来说，100个样例的开发集确实小了点儿。一般，开发集都是1000到10000这么大。当你有了10000个样例时，你就能检测出那0.1的提高啦(注释1)<font color="#D2691E">（我觉得0.01也能检测出来）</font>。<br>对于成熟而重要的应用，例如广告，网页搜索，产品推荐，我见过一些团队为哪怕提高0.01%的精确度而努力工作，因为这对公司的利益有直接的影响。在这种情况下，开发集可以远大于10000，以便检测出更小的提高。<br>测试集的大小呢？<br>测试集应该大到在测试你的系统的整体性能时，是可信服的。一个比较流行的方法是取30%的数据作为测试集，这种方法在适量数据(100到10000个样例)时，效果很好。但在大数据时期，有的机器学习问题的样例甚至超过了十亿，此时，开发/训练集占总数据的比例减少了，但数量变多了。其实没有必要具有过大的开发/测试集，只需要能评估你的算法就行了。</p>
+<p>[注释1]： 理论上，还可以测试算法的变化是否引起统计显著性差异。实际中，多数团队都不做这个测试（除非他们要发表学术性研究论文），我发现统计显著性检验对临时进展<font color="#D2691E">（interim progress，即每次改变算法获得的改进）</font>没有什么用</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">翻译</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/01/30/MLY-7-How-large-do-the-dev-test-sets-need-to-be/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
     <article id="post-MLY-6-Your-dev-and-test-sets-should-come-from-the-same-distribution" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     

@@ -613,6 +613,59 @@
 
 
   
+    <article id="post-Deep-Nerual-Networks-are-Easily-Fooled-High-Confidence-Predictions-for-Unrecognize-Images" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/02/16/Deep-Nerual-Networks-are-Easily-Fooled-High-Confidence-Predictions-for-Unrecognize-Images/">Deep Nerual Networks are Easily Fooled:High Confidence Predictions for Unrecognize Images</a>
+    </h1>
+  
+
+        
+        <a href="/2017/02/16/Deep-Nerual-Networks-are-Easily-Fooled-High-Confidence-Predictions-for-Unrecognize-Images/" class="archive-article-date">
+  	<time datetime="2017-02-16T08:48:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-16</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>ժҪ</strong><br>
+        
+          <a class="article-more-a" href="/2017/02/16/Deep-Nerual-Networks-are-Easily-Fooled-High-Confidence-Predictions-for-Unrecognize-Images/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/02/16/Deep-Nerual-Networks-are-Easily-Fooled-High-Confidence-Predictions-for-Unrecognize-Images/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
     <article id="post-MLY-9-Optimizing-and-satisficing-metrics" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -724,71 +777,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2017/02/16/MLY-8-Establish-a-single-number-evaluation-metric-for-your-team-to-optimize/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-PathNet-Evolution-Channels-Gradient-Descent-in-Super" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/02/07/PathNet-Evolution-Channels-Gradient-Descent-in-Super/">PathNet: Evolution Channels Gradient Descent in Super Nerual Networks</a>
-    </h1>
-  
-
-        
-        <a href="/2017/02/07/PathNet-Evolution-Channels-Gradient-Descent-in-Super/" class="archive-article-date">
-  	<time datetime="2017-02-07T03:09:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-07</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <a id="more"></a>
-<p>来自Google DeepMind，Google Brain,1月30，arXiv的一片文章。</p>
-<p><font color="green">摘要</font>：<br>对AGI（artificial general intelligence，通用人工智能）来说，这将会是有效率的：多个用户同时训练巨大的神经网路、允许参数复用、不允许灾难性的遗忘。PathNet是这个方向的先行者。PathNet是一个<font color="blue">使用agents嵌入神经网络中，agents的作用是发现网络中哪一部分可以用于新任务</font>的神经网络算法。agents是贯穿整个网络的通路，它决定参数的哪个子集可以被使用和被反向传播算法更新。在学习期间。“竞争选择遗传算法”被用于选择用于复制和突变的神经网路的通路。通路适应度值是用费用函数（cost function）计算的通路的表现（performance）。我们成功论证了迁移学习（transfer learning）；将在任务A上学习的路径的参数固定并且为任务B重新演化一个新路径群，会比从头或在微调后更快地学习任务B。在任务B上演化的路径，部分重用在任务A上演化出的最佳路径。正迁移被证明为binary MNIST、CIFAR、SVHN监督学习分类任务和一组Atari and Labyrinth强化学习任务。这说明PathNet对于神经网络的训练具有一般适用性。最后，PathNet显著提高了并行异步强化学习算法的超参数选择的鲁棒性。</p>
-<p><font color="green">综述</font><br>通用人工智能的一个合理需求是许多用户被要求在大量任务上训练相同的巨型神经网络。这是网络获得经验的最有效的方式，因为这种网络可以复用现有知识，而不是为每个任务都从头开始学习。为了实现这一点，我们建议给巨型网络的每个用户一群代理，这群代理的工作是尽可能有效的学习用户定义的任务。代理将通过在神经网络内执行动作来学习如何更好地复用神经网络环境中现有的参数。代理必须与正在为其他用户学习其他任务的其他代理并行工作，如果可能传输则共享参数，如果干扰显著则学习更新不相交的参数。每个代理本身可以由任意复杂的强化学习算法控制，但是在这里我们选择最简单的可能的“代理”，一个进化的单位。<br>上述AGI的框架包括迁移学习，连续学习(continual learning)和多任务学习(multitask learning)。我们论文的motivation和最近的一篇论文“非常大的神经网络”相同，其中作者写到“神经网络吸收信息的能力受其参数数量的限制”。如果标准神经网络训练成本和模型宽度成二次方，而PathNet理论上具有相对于模型宽度的恒定计算速度，因为在任何情况下只有较大网络固定大小的子集用于向前和向后传播。我们的工作还涉及“卷积神经结构”，其中结构之间的模块的连接强度被学习，但是结构在整个时间不变（PathNet则不同）。本文介绍了PathNet，一种新颖的学习算法，支持迁移、连续多任务学习。图一说明了算法的运行过程。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">new papers</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/02/07/PathNet-Evolution-Channels-Gradient-Descent-in-Super/">展开全文 >></a>
         </p>
       
 

@@ -6,17 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://mengmengmiao.github.io">
-  <title>Archives: 2017/3 | mengmengmiao</title>
+  <title>Synthesizing the preferred inputs for neurons in neural networks via deep genetator networks | mengmengmiao</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="love life">
-<meta property="og:type" content="website">
-<meta property="og:title" content="mengmengmiao">
-<meta property="og:url" content="https://mengmengmiao.github.io/archives/2017/03/index.html">
+  <meta name="description" content="摘要理解神经网络的内部是如何运行的一种方法是研究它的每个神经元学会检测了什么。这样的一种方法叫做激活最大化（AM），这种方法合成高度激活神经元的输入（例如，图像什么意思，合成输入到什么里的输入？）。在本文，我们通过利用一个强大的，学习过的先验：DGN，大大将AM的定性状态提高到目前最好。算法（1）生成定性的最先进的合成图像，图像看起来像真的（2）以可解释的方式揭示每个神经元学习的特征（3）对于新的">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Synthesizing the preferred inputs for neurons in neural networks via deep genetator networks">
+<meta property="og:url" content="https://mengmengmiao.github.io/2017/02/18/Synthesizing-the-preferred-inputs-for-neurons-in-neural-networks-via-deep-genetator-networks/index.html">
 <meta property="og:site_name" content="mengmengmiao">
-<meta property="og:description" content="love life">
+<meta property="og:description" content="摘要理解神经网络的内部是如何运行的一种方法是研究它的每个神经元学会检测了什么。这样的一种方法叫做激活最大化（AM），这种方法合成高度激活神经元的输入（例如，图像什么意思，合成输入到什么里的输入？）。在本文，我们通过利用一个强大的，学习过的先验：DGN，大大将AM的定性状态提高到目前最好。算法（1）生成定性的最先进的合成图像，图像看起来像真的（2）以可解释的方式揭示每个神经元学习的特征（3）对于新的">
+<meta property="og:updated_time" content="2017-03-01T14:15:05.653Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="mengmengmiao">
-<meta name="twitter:description" content="love life">
+<meta name="twitter:title" content="Synthesizing the preferred inputs for neurons in neural networks via deep genetator networks">
+<meta name="twitter:description" content="摘要理解神经网络的内部是如何运行的一种方法是研究它的每个神经元学会检测了什么。这样的一种方法叫做激活最大化（AM），这种方法合成高度激活神经元的输入（例如，图像什么意思，合成输入到什么里的输入？）。在本文，我们通过利用一个强大的，学习过的先验：DGN，大大将AM的定性状态提高到目前最好。算法（1）生成定性的最先进的合成图像，图像看起来像真的（2）以可解释的方式揭示每个神经元学习的特征（3）对于新的">
   
     <link rel="alternative" href="/atom.xml" title="mengmengmiao" type="application/atom+xml">
   
@@ -156,49 +157,157 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-Synthesizing-the-preferred-inputs-for-neurons-in-neural-networks-via-deep-genetator-networks" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/03/01/Synthesizing-the-preferred-inputs-for-neurons-in-neural-networks-via-deep-genetator-networks/" class="archive-article-date">
-  	<time datetime="2017-03-01T11:03:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-01</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/01/Synthesizing-the-preferred-inputs-for-neurons-in-neural-networks-via-deep-genetator-networks/">Synthesizing the preferred inputs for neurons in neural networks via deep genetator networks</a>
+    <h1 class="article-title" itemprop="name">
+      Synthesizing the preferred inputs for neurons in neural networks via deep genetator networks
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
+        
+        <a href="/2017/02/18/Synthesizing-the-preferred-inputs-for-neurons-in-neural-networks-via-deep-genetator-networks/" class="archive-article-date">
+  	<time datetime="2017-02-18T11:03:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-18</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>摘要</strong><br>理解神经网络的内部是如何运行的一种方法是研究它的每个神经元学会检测了什么。这样的一种方法叫做激活最大化（AM），这种方法合成高度激活神经元的输入（例如，图像<font color="red">什么意思，合成输入到什么里的输入？</font>）。在本文，我们通过利用一个强大的，学习过的先验：DGN，大大将AM的定性状态提高到目前最好。算法（1）生成定性的最先进的合成图像，图像看起来像真的（2）以可解释的方式揭示每个神经元学习的特征（3）对于新的数据集泛化能力好，并且对不同的网络架构在不用重新学习先验的情况下有一定的好的泛化能力（4）可以被认为是高质量的生成方法（在这种情况下，通过生成新颖，有创意，可识别的图像）。<br><strong>1 简介和相关工作</strong></p>
 
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="http://ww1.sinaimg.cn/mw1024/87699103jw1fc2xc5q8mkj20df0dqdhb.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="http://ww3.sinaimg.cn/mw1024/87699103jw1fc2xc63blcj20dd0ddjst.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=https://mengmengmiao.github.io/2017/02/18/Synthesizing-the-preferred-inputs-for-neurons-in-neural-networks-via-deep-genetator-networks/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2017/02/20/understanding-deep-learning-requires-rethinking-generalization/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          understanding deep learning requires rethinking generalization
+        
+      </div>
+    </a>
   
   
-    </div></section>
+    <a href="/2017/02/18/MLY-14-Evaluating-multiple-ideas-in-parallel-during-error-analysisi/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">MLY -- 14.Evaluating multiple ideas in parallel during error analysis</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+
+  
+    <div class="duoshuo"></div>
   
 
-    
+
 
 
           </div>
@@ -221,8 +330,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

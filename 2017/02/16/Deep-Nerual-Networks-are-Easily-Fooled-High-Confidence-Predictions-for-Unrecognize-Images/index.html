@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="mengmengmiao">
 <meta property="og:description" content="摘要">
 <meta property="og:image" content="http://ologtxmtl.bkt.clouddn.com/zaohengtu.png">
-<meta property="og:updated_time" content="2017-02-28T07:20:11.432Z">
+<meta property="og:updated_time" content="2017-03-01T02:39:52.895Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Deep Nerual Networks are Easily Fooled:High Confidence Predictions for Unrecognize Images">
 <meta name="twitter:description" content="摘要">
@@ -179,7 +179,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><strong>摘要</strong><br><a id="more"></a><br>鉴于现在深度神经网络分类目标的水平已经接近人类了，自然人们会问计算机和人类的视觉之间存在什么差异？最近的一项研究显示，以人类不能察觉到的方式改变图像（例如狮子）可能导致DNN将图像标记为风马牛不相及的东西（例如，将狮子标记为图书馆）。在这里，我们展示了一个相关的结果：很容易产生完全不能被人类所识别的图像，但是最先进的DNN认为是具有99.99%置信度的可识别对象（例如，把白噪声标记为狮子）的图片。具体来说，我们采用在ImageNet 和MNIST上训练兵表现良好的卷积神经网络，然后使用此网络结合进化算法或者梯度上升找到被DNN标记为高置信度的图片。找到的图片可能人类完全不能识别，然而DNNs相信，几乎确定是熟悉的对象，我们称之为“愚弄图像”（愚弄例子）。我们的实验结果阐明了人类视觉和当前DNN之间有趣的差异，<font color="red">并提出关于DNN计算机视觉的通用性的问题。</font><br><strong>Introduction</strong><br>既然DNN对是视觉对象分类的能力和人媲美（sometimes），那么问题来了，计算机和人类视觉之间存在什么样的差异？最近有个研究揭示了DNN和人类视觉之间的主要区别。以人类不可察觉的方式改变最初正确分类的图片（例如狮子），DNN将会把它标记为风马牛不相及的东西（例如图书馆）。在本工作中，我们展示另一种区别：很容易产生完全不能被人类识别的图片（图1），但是DNN认为是置信度99%的可识别物体（例如把电视静息图像识别成摩托车）。我们发现，对于用MNIST训练的DNN，即使将愚弄图片放入训练集再训练DNN，也不容易防止DNN被欺骗。虽然重新训练的DNN学习将负样例分类为愚弄图片，但重新训练后的网络还是可以产生一批愚弄此网络的图片。<br>我们的发现还街漏了一个问题：<font color="blue">与训练和测试过DNN的图片相比，在不同类别的图片上，DNN通常表现如何。</font><br><img src="http://ologtxmtl.bkt.clouddn.com/zaohengtu.png" alt="zansheng"><br>图1.人类无法识别的演变(evolved)图像，但是在ImageNet上训练的最先进的DNNy以置信度≥99.6％确定是一个熟悉的目标。 这个结果突出了DNN和人类之间识别对象的差异。图像是直接（顶部）或间接（底部）编码</p>
+        <p><strong>摘要</strong><br><a id="more"></a><br>鉴于现在深度神经网络分类目标的水平已经接近人类了，自然人们会问计算机和人类的视觉之间存在什么差异？最近的一项研究显示，以人类不能察觉到的方式改变图像（例如狮子）可能导致DNN将图像标记为风马牛不相及的东西（例如，将狮子标记为图书馆）。在这里，我们展示了一个相关的结果：很容易产生完全不能被人类所识别的图像，但是最先进的DNN认为是具有99.99%置信度的可识别对象（例如，把白噪声标记为狮子）的图片。具体来说，我们采用在ImageNet 和MNIST上训练兵表现良好的卷积神经网络，然后使用此网络结合进化算法或者梯度上升找到被DNN标记为高置信度的图片。找到的图片可能人类完全不能识别，然而DNNs相信，几乎确定是熟悉的对象，我们称之为“愚弄图像”（愚弄例子）。我们的实验结果阐明了人类视觉和当前DNN之间有趣的差异，<font color="red">并提出关于DNN计算机视觉的通用性的问题。</font><br><strong>1 Introduction</strong><br>既然DNN对是视觉对象分类的能力和人媲美（sometimes），那么问题来了，计算机和人类视觉之间存在什么样的差异？最近有个研究揭示了DNN和人类视觉之间的主要区别。以人类不可察觉的方式改变最初正确分类的图片（例如狮子），DNN将会把它标记为风马牛不相及的东西（例如图书馆）。在本工作中，我们展示另一种区别：很容易产生完全不能被人类识别的图片（图1），但是DNN认为是置信度99%的可识别物体（例如把电视静息图像识别成摩托车）。我们发现，对于<font color="blue">MNIST DNNs</font>，即使将愚弄图片放入训练集再训练DNN，也不容易防止DNN被欺骗。虽然重新训练的DNN学习将负样例分类为愚弄图片，但重新训练后的网络还是可以产生一批愚弄此网络的图片。<br>我们的发现还街漏了一个问题：<font color="blue">与训练和测试过DNN的图片相比，在不同类别的图片上，DNN通常表现如何。</font><br><img src="http://ologtxmtl.bkt.clouddn.com/zaohengtu.png" alt="zansheng"><br>图1.人类无法识别的演变(evolved)图像，但是在ImageNet上训练的最先进的DNN以置信度≥99.6％确定是一个熟悉的目标。 这个结果突出了DNN和人类之间识别对象的差异。图像是直接（顶部）或间接（底部）编码得到。</p>
+<p><strong>2 方法</strong><br><strong>2.1 DNN模型</strong><br>选用AlexNet，使用ILSVRC的1.3-million-image训练。实际山个，我们用了caffe软件包训练好的AlexNet。选用AlexNet是因为它广为人知、公开和被训练过。在本文中，我们称AlexNet为ImageNet DNN。为了测试我们的结果适用于其他模型，我们还用来自xaffe的在MNIST上训练的LeNet（我们称MNIST DNN）进行了实验。<br><strong>2.2 用进化生成图像</strong><br>我们测试DNN的新图像是由进化算法生成的。进化算法中，哪些个体被选择取决于适应度函数，在我们的试验中DNN预测为某一类别的预测值最高的图像将被选择。一般，EA是单目标优化的（演变图像匹配一个ImageNet类）。而我们改为使用称为表型精英MAP精英的多维档案的新算法，能使我们同时演变一个群，这个群里的个体都是在那个类别下被DNN分类预测值最高的</p>
 
       
 

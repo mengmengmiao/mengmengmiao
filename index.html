@@ -365,24 +365,25 @@
 <p> #After successfully completing basic installation, you’ll be ready to run the demo.<br> cd $FRCN_ROOT<br> ./tools/demo.py</p>
 <p> 出现错误：<br>   import error no module named _caffe。（在caffe-master下的py-faster-rcnn下执行./tools/demo.py,而不是和caffe-master并列的那个）<br> 解决方法：</p>
 <p>   #回到caffe-master<br>   make distribute</p>
-<h1 id="make-dir-for-custom-python-modules-install-caffe"><a href="#make-dir-for-custom-python-modules-install-caffe" class="headerlink" title="make dir for custom python modules, install caffe"></a>make dir for custom python modules, install caffe</h1><p>   mkdir ~/python<br>   mv distribute/python/caffe ~/python</p>
-<h1 id="set-PYTHONPATH-this-should-go-in-your-bashrc-or-whatever"><a href="#set-PYTHONPATH-this-should-go-in-your-bashrc-or-whatever" class="headerlink" title="set PYTHONPATH (this should go in your .bashrc or whatever"></a>set PYTHONPATH (this should go in your .bashrc or whatever</h1><p>   #回到用户主目录，<br>   export PYTHONPATH = $PYTHONPATH:~/caffe-master/python/caffe<br>   source ~/.bashrc</p>
+<p>   #make dir for custom python modules, install caffe<br>   mkdir ~/python<br>   mv distribute/python/caffe ~/python</p>
+<p>   #set PYTHONPATH (this should go in your .bashrc or whatever</p>
+<p>   #回到用户主目录，<br>   export PYTHONPATH = $PYTHONPATH:~/caffe-master/python/caffe<br>   source ~/.bashrc</p>
 <p> 出现错误：<br>   importERROR no module named skimage.io<br> 解决方法：</p>
 <p>   #直接使用终端安装：</p>
 <p>   #回到用户主目录<br>   pip install -U scikit-image (过程漫长)</p>
 <p> 出现错误：<br>   imortERROR：no module named google.protobuf.internal<br> 解决方法：<br>   sudo apt-get install python-protobuf</p>
 <p> 出现错误：<br>   ImportERROR: no module named gpu_nms<br> 解决方法：<br>   在py-faster-rcnn的lib中make</p>
 <p> 出现错误：<br>   ImportERROR：no  module named _tkinter,please install the python-tk package<br> 解决方法：<br>   sudo apt-get install python-tk</p>
-<p>  出现错误：<br>   Check failed:ReadProtorFromTextFile(param_file,param) failed to parse NetParameter file: / home/meng/caffe-master/py-faster-rcn/models/pascal_voc/VGG16/faster_rcnn_alt_opt/faster_rcnn_test.pt<br>   <strong><em>Check failure stack trace</em></strong></p>
+<p>  出现错误：<br>   Check failed:ReadProtorFromTextFile(param_file,param) failed to parse NetParameter file: / home/meng/caffe-master/py-faster-rcn/models/pascal_voc/VGG16/faster_rcnn_alt_opt/faster_rcnn_test.pt<br>   ***Check failure stack trace***</p>
 <font color="blue">这个问题难解决，主要是因为py-faster-rcnn用的caffe是旧版本，而我的电脑上装的是新版本的，所以出现了这么多问题。所以做到这里，我决定把py-faster-rcnn的旧版本文件用新的替换下来（新文件来自caffe新版）</font>
 
 <p>1.编译/py-faster-rcnn/caffe-fast-rcnn<br>   cd py-faster-rcnn/caffe-fast-rcnn<br>   cp Makefile.config.example Makefile.config  </p>
 <p> 更改Makefile.config文件：</p>
-<h1 id="In-your-Makefile-config-make-sure-to-have-this-line-uncommented"><a href="#In-your-Makefile-config-make-sure-to-have-this-line-uncommented" class="headerlink" title="In your Makefile.config, make sure to have this line uncommented"></a>In your Makefile.config, make sure to have this line uncommented</h1><p> WITH_PYTHON_LAYER := 1  </p>
-<h1 id="Unrelatedly-it’s-also-recommended-that-you-use-CUDNN"><a href="#Unrelatedly-it’s-also-recommended-that-you-use-CUDNN" class="headerlink" title="Unrelatedly, it’s also recommended that you use CUDNN"></a>Unrelatedly, it’s also recommended that you use CUDNN</h1><p> USE_CUDNN := 1  </p>
-<h1 id="配置一些引用文件（增加部分主要是解决新版本下，HDF5的路径问题）"><a href="#配置一些引用文件（增加部分主要是解决新版本下，HDF5的路径问题）" class="headerlink" title="配置一些引用文件（增加部分主要是解决新版本下，HDF5的路径问题）"></a>配置一些引用文件（增加部分主要是解决新版本下，HDF5的路径问题）</h1><p> INCLUDE_DIRS := $(PYTHON_INCLUDE) /usr/local/include /usr/lib/x86_64-linux-gnu/hdf5/serial/include<br> LIBRARY_DIRS := $(PYTHON_LIB) /usr/local/lib /usr/lib /usr/lib/x86_64-linux-gnu/hdf5/serial</p>
-<h1 id="启用Intel-Parallel-Studio-XE-2016"><a href="#启用Intel-Parallel-Studio-XE-2016" class="headerlink" title="启用Intel Parallel Studio XE 2016"></a>启用Intel Parallel Studio XE 2016</h1><p> BLAS := mkl</p>
-<h1 id="配置路径，实现caffe对Python接口的支持"><a href="#配置路径，实现caffe对Python接口的支持" class="headerlink" title="配置路径，实现caffe对Python接口的支持"></a>配置路径，实现caffe对Python接口的支持</h1><p> PYTHON_LIB := /usr/local/lib</p>
+<p> #In your Makefile.config, make sure to have this line uncommented<br> WITH_PYTHON_LAYER := 1  </p>
+<p> #Unrelatedly, it’s also recommended that you use CUDNN<br> USE_CUDNN := 1  </p>
+<p> #配置一些引用文件（增加部分主要是解决新版本下，HDF5的路径问题）<br> INCLUDE_DIRS := $(PYTHON_INCLUDE) /usr/local/include /usr/lib/x86_64-linux-gnu/hdf5/serial/include<br> LIBRARY_DIRS := $(PYTHON_LIB) /usr/local/lib /usr/lib /usr/lib/x86_64-linux-gnu/hdf5/serial</p>
+<p> #启用Intel Parallel Studio XE 2016<br> BLAS := mkl</p>
+<p> #配置路径，实现caffe对Python接口的支持<br> PYTHON_LIB := /usr/local/lib</p>
 <p> #启用OpenCV 3.0, 去掉”#”<br> OPENCV_VERSION =3</p>
 <p>进行编译：<br> make -j8 &amp;&amp; make pycaffe </p>
 <p> 因为这个版本所用的cudnn为旧版本的，可能与新环境的cudnn不兼容，导致出现如下错误：<br> make: <em>*</em> [.build_release/src/caffe/util/db.o] Error 1  (可能是这个，类似吧，有点乱。)<br> 解决办法：<br>         1).将/py-faster-rcnn/caffe-fast-rcnn/include/caffe/util/cudnn.hpp 换成最新版的caffe里的cudnn的实现，即相应的cudnn.hpp.<br>         2).将/py-faster-rcnn/caffe-fast-rcnn/src/caffe/layer里的，所有以cudnn开头的文件，例如cudnn_lrn_layer.cu，cudnn_pooling_layer.cpp，cudnn_sigmoid_layer.cu。<br>   都替换成最新版的caffe里的相应的同名文件。</p>

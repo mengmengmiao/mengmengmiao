@@ -238,6 +238,59 @@
 
 
   
+    <article id="post-如何远程ssh运行图形化应用？putty-Xming" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/03/08/如何远程ssh运行图形化应用？putty-Xming/">如何远程ssh运行图形化应用？putty+Xming</a>
+    </h1>
+  
+
+        
+        <a href="/2017/03/08/如何远程ssh运行图形化应用？putty-Xming/" class="archive-article-date">
+  	<time datetime="2017-03-08T14:00:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-08</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>参考<a href="http://www.bubuko.com/infodetail-807886.html">http://www.bubuko.com/infodetail-807886.html</a><br>
+        
+          <a class="article-more-a" href="/2017/03/08/如何远程ssh运行图形化应用？putty-Xming/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/03/08/如何远程ssh运行图形化应用？putty-Xming/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
     <article id="post-PSCP-windows传输文件-文件夹到linux" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -359,39 +412,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>代码：<a href="https://github.com/rbgirshick/fast-rcnn" target="_blank" rel="external">https://github.com/rbgirshick/fast-rcnn</a><br><strong><font color="red">Installation (sufficient for the demo)</font></strong><br>0.可能需要Python安装包：cython，python-opencv，easydict</p>
-<p> 先装一个python包管理器pip：<br>     sudo apt-get install python-pip<br> 再安装那三个包<br>     sudo pip install cython<br>     sudo apt-get install python-opencv (进入python，import cv2可看到是否安装成功)<br>     sudo pip install easydict<br>1.从git clone faster r-cnn<br>  git clone –recursive <a href="https://github.com/rbgirshick/fast-rcnn.git" target="_blank" rel="external">https://github.com/rbgirshick/fast-rcnn.git</a><br>2.cd 到py-faster-rcnn/lib （rbg的第二步不用管，本文中，依然使用py-faster-rcnn而没用FRCN_ROOT）<br>  make<br>3.Download pre-computed Faster R-CNN detectors（rbg的那个步骤4，在已经安装了caffe的情况下，不用再做）<br>  cd $FRCN_ROOT<br>  ./data/scripts/fetch_faster_rcnn_models.sh</p>
-<p><strong><font color="red">Demo</font></strong></p>
-<p> #After successfully completing basic installation, you’ll be ready to run the demo.<br> cd $FRCN_ROOT<br> ./tools/demo.py</p>
-<p> 出现错误：<br>   import error no module named _caffe。（在caffe-master下的py-faster-rcnn下执行./tools/demo.py,而不是和caffe-master并列的那个）<br> 解决方法：</p>
-<p>   #回到caffe-master<br>   make distribute</p>
-<p>   #make dir for custom python modules, install caffe<br>   mkdir ~/python<br>   mv distribute/python/caffe ~/python</p>
-<p>   #set PYTHONPATH (this should go in your .bashrc or whatever</p>
-<p>   #回到用户主目录，<br>   export PYTHONPATH = $PYTHONPATH:~/caffe-master/python/caffe<br>   source ~/.bashrc</p>
-<p> 出现错误：<br>   importERROR no module named skimage.io<br> 解决方法：</p>
-<p>   #直接使用终端安装：</p>
-<p>   #回到用户主目录<br>   pip install -U scikit-image (过程漫长)</p>
-<p> 出现错误：<br>   imortERROR：no module named google.protobuf.internal<br> 解决方法：<br>   sudo apt-get install python-protobuf</p>
-<p> 出现错误：<br>   ImportERROR: no module named gpu_nms<br> 解决方法：<br>   在py-faster-rcnn的lib中make</p>
-<p> 出现错误：<br>   ImportERROR：no  module named _tkinter,please install the python-tk package<br> 解决方法：<br>   sudo apt-get install python-tk</p>
-<p>  出现错误：<br>   Check failed:ReadProtorFromTextFile(param_file,param) failed to parse NetParameter file: / home/meng/caffe-master/py-faster-rcn/models/pascal_voc/VGG16/faster_rcnn_alt_opt/faster_rcnn_test.pt<br>   ***Check failure stack trace***</p>
-<font color="blue">这个问题难解决，主要是因为py-faster-rcnn用的caffe是旧版本，而我的电脑上装的是新版本的，所以出现了这么多问题。所以做到这里，我决定把py-faster-rcnn的旧版本文件用新的替换下来（新文件来自caffe新版）</font>
-
-<p>1.编译/py-faster-rcnn/caffe-fast-rcnn<br>   cd py-faster-rcnn/caffe-fast-rcnn<br>   cp Makefile.config.example Makefile.config  </p>
-<p> 更改Makefile.config文件：</p>
-<p> #In your Makefile.config, make sure to have this line uncommented<br> WITH_PYTHON_LAYER := 1  </p>
-<p> #Unrelatedly, it’s also recommended that you use CUDNN<br> USE_CUDNN := 1  </p>
-<p> #配置一些引用文件（增加部分主要是解决新版本下，HDF5的路径问题）<br> INCLUDE_DIRS := $(PYTHON_INCLUDE) /usr/local/include /usr/lib/x86_64-linux-gnu/hdf5/serial/include<br> LIBRARY_DIRS := $(PYTHON_LIB) /usr/local/lib /usr/lib /usr/lib/x86_64-linux-gnu/hdf5/serial</p>
-<p> #启用Intel Parallel Studio XE 2016<br> BLAS := mkl</p>
-<p> #配置路径，实现caffe对Python接口的支持<br> PYTHON_LIB := /usr/local/lib</p>
-<p> #启用OpenCV 3.0, 去掉”#”<br> OPENCV_VERSION =3</p>
-<p>进行编译：<br> make -j8 &amp;&amp; make pycaffe </p>
-<p> 因为这个版本所用的cudnn为旧版本的，可能与新环境的cudnn不兼容，导致出现如下错误：<br> make: <em>*</em> [.build_release/src/caffe/util/db.o] Error 1  (可能是这个，类似吧，有点乱。)<br> 解决办法：<br>         1).将/py-faster-rcnn/caffe-fast-rcnn/include/caffe/util/cudnn.hpp 换成最新版的caffe里的cudnn的实现，即相应的cudnn.hpp.<br>         2).将/py-faster-rcnn/caffe-fast-rcnn/src/caffe/layer里的，所有以cudnn开头的文件，例如cudnn_lrn_layer.cu，cudnn_pooling_layer.cpp，cudnn_sigmoid_layer.cu。<br>   都替换成最新版的caffe里的相应的同名文件。</p>
-<p> 再次make -j8 &amp;&amp; make pycaffe<br> 会遇到错误：<br>   make: <em>*</em> [.build_release/src/caffe/layers/cudnn_relu_layer.o] 错误 1<br> 解决方法：<br>  将/py-faster-rcnn/caffe-fast-rcnn/include/caffe/layers的，所有以cudnn开头的文件，例如cudnn_conv_layer.hpp，cudnn_lcn_laye.hpp</p>   都替换成最新版的caffe里的相应的同名文件  <p></p>
-<p> 遇到错误：<br>   ImportError:no module named yaml<br> 解决方法：<br>   sudo apt-get install python-yaml</p>
-<p> 遇到错误：<br>   “/home/meng/.local/lib/python2.7/site-packages/matplot<br>   file “/usr/lib/python2.7/lib-tk/Tkinter.py”<br>   self.tk = _tkinter.create(screenName,baseName,className,interative,wantobjexts.useTk,sync,use)<br>   _tkinter.TclError: no display name and no $DISPALY environment variable<br> 解决方法：<br>   这错误是因为用putty远程登陆导致的，那个窗口弹不出来。给windows装个Xming吧。</p>
-<p>2.运行faster-rcnn里的demo<br>   cd py-faster-rcnn/tools<br>   ./tools/demo.py  </p>
-
+        <p>代码：<a href="https://github.com/rbgirshick/fast-rcnn">https://github.com/rbgirshick/fast-rcnn</a><br>
+        
+          <a class="article-more-a" href="/2017/03/07/安装faster-rcnn/#more">more >></a>
+        
       
 
       
@@ -704,59 +728,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2017/02/17/MLY-12-Takeways-Setting-up-development-and-test-sets/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-Understanding-Neural-Networks-Through-Deep-Visualization" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/02/17/Understanding-Neural-Networks-Through-Deep-Visualization/">Understanding Neural Networks Through Deep Visualization</a>
-    </h1>
-  
-
-        
-        <a href="/2017/02/17/Understanding-Neural-Networks-Through-Deep-Visualization/" class="archive-article-date">
-  	<time datetime="2017-02-17T05:19:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-17</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><strong>摘要</strong><br>
-        
-          <a class="article-more-a" href="/2017/02/17/Understanding-Neural-Networks-Through-Deep-Visualization/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/02/17/Understanding-Neural-Networks-Through-Deep-Visualization/">展开全文 >></a>
         </p>
       
 

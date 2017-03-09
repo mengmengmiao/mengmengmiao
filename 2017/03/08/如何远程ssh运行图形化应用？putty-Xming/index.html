@@ -14,7 +14,7 @@
 <meta property="og:url" content="https://mengmengmiao.github.io/2017/03/08/如何远程ssh运行图形化应用？putty-Xming/index.html">
 <meta property="og:site_name" content="mengmengmiao">
 <meta property="og:description" content="参考http://www.bubuko.com/infodetail-807886.html">
-<meta property="og:updated_time" content="2017-03-08T14:50:03.623Z">
+<meta property="og:updated_time" content="2017-03-09T03:20:32.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="如何远程ssh运行图形化应用？putty+Xming">
 <meta name="twitter:description" content="参考http://www.bubuko.com/infodetail-807886.html">
@@ -177,7 +177,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>参考<a href="http://www.bubuko.com/infodetail-807886.html" target="_blank" rel="external">http://www.bubuko.com/infodetail-807886.html</a><br><a id="more"></a><br>step 1 ：先去搜Putty.exe装在windows上。<br>step 2 : 搜Xming装在windows上。（到sourceforge上下载：<a href="http://sourceforge.net/projects/xming/?source=typ_redirect，" target="_blank" rel="external">http://sourceforge.net/projects/xming/?source=typ_redirect，</a> 分别下载 xming 与 xming-fonts。）装完Xming和Xming-fonts，点XLaunch，一路next，直到结束。<br>step 3 ：Unix/Linux 服务器的配置<br>　　修改下要登录的服务器的配置文件，增加对 X11 Forwarding的支持：<br>　　sudo vi　/etc/ssh/sshd_config: （在文件的末尾，增加以下配置）<br>    X11Forwarding yes<br>step 4 ：Putty配置<br>    session - &gt; Host Name填服务器IP，port填22，connection type选ssh，save session随便填个名字 - &gt; 点SSH下的X11 - &gt; 选择enable X11 forwarding ，X display location填localhost:0,MIT-Magic-Cookie-1填上 - &gt; 选Session，点save</p>
+        <p>参考<a href="http://www.bubuko.com/infodetail-807886.html" target="_blank" rel="external">http://www.bubuko.com/infodetail-807886.html</a><br><a id="more"></a><br>step 1 ：先去搜Putty.exe装在windows上。<br>step 2 : 搜Xming装在windows上。（到sourceforge上下载：<a href="http://sourceforge.net/projects/xming/?source=typ_redirect，" target="_blank" rel="external">http://sourceforge.net/projects/xming/?source=typ_redirect，</a> 分别下载 xming 与 xming-fonts。）<br>         Xming-6-9-0-31-setup.exe<br>         Xming-fonts-7-5-0-11-setup.exe<br>         装完Xming和Xming-fonts，点XLaunch，一路next，直到结束。<br>step 3 ：Unix/Linux 服务器的配置<br>　　修改下要登录的服务器的配置文件，增加对 X11 Forwarding的支持：<br>　　sudo vi　/etc/ssh/sshd_config: （在文件的末尾，增加以下配置）<br>    X11Forwarding yes<br>step 4 ：Putty配置<br>    session - &gt; Host Name填服务器IP，port填22，connection type选ssh，save session随便填个名字 - &gt; 点SSH下的X11 - &gt; 选择enable X11 forwarding ，X display location填localhost:0,MIT-Magic-Cookie-1填上 - &gt; 选Session，点save</p>
 
       
 

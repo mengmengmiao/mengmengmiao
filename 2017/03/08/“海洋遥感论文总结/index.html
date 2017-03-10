@@ -8,22 +8,16 @@
   <link rel="dns-prefetch" href="https://mengmengmiao.github.io">
   <title>“海洋遥感论文总结 | mengmengmiao</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="关键字：海洋遥感，光学遥感(optical remote sensing)，目标识别(object recognition),目标检测（object detection）
-1.Ship Detection in Spaceborne Optical Image with SVD Networks
-  期刊：IEEE Transactions on Geoscience &amp;amp; Remote S">
+  <meta name="description" content="关键字：海洋遥感，光学遥感(optical remote sensing)，目标识别(object recognition),目标检测（object detection）">
 <meta property="og:type" content="article">
 <meta property="og:title" content="“海洋遥感论文总结">
 <meta property="og:url" content="https://mengmengmiao.github.io/2017/03/08/“海洋遥感论文总结/index.html">
 <meta property="og:site_name" content="mengmengmiao">
-<meta property="og:description" content="关键字：海洋遥感，光学遥感(optical remote sensing)，目标识别(object recognition),目标检测（object detection）
-1.Ship Detection in Spaceborne Optical Image with SVD Networks
-  期刊：IEEE Transactions on Geoscience &amp;amp; Remote S">
-<meta property="og:updated_time" content="2017-03-09T04:28:48.497Z">
+<meta property="og:description" content="关键字：海洋遥感，光学遥感(optical remote sensing)，目标识别(object recognition),目标检测（object detection）">
+<meta property="og:updated_time" content="2017-03-10T04:04:54.067Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="“海洋遥感论文总结">
-<meta name="twitter:description" content="关键字：海洋遥感，光学遥感(optical remote sensing)，目标识别(object recognition),目标检测（object detection）
-1.Ship Detection in Spaceborne Optical Image with SVD Networks
-  期刊：IEEE Transactions on Geoscience &amp;amp; Remote S">
+<meta name="twitter:description" content="关键字：海洋遥感，光学遥感(optical remote sensing)，目标识别(object recognition),目标检测（object detection）">
   
     <link rel="alternative" href="/atom.xml" title="mengmengmiao" type="application/atom+xml">
   
@@ -183,13 +177,18 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>关键字：海洋遥感，光学遥感(optical remote sensing)，目标识别(object recognition),目标检测（object detection）</p>
+        <p>关键字：海洋遥感，光学遥感(optical remote sensing)，目标识别(object recognition),目标检测（object detection）<br><a id="more"></a></p>
 <p>1.Ship Detection in Spaceborne Optical Image with SVD Networks</p>
-<p>  期刊：IEEE Transactions on Geoscience &amp; Remote Sensing，2016<br>  目标：ship；spaceborne optical image；数据来源于委内瑞拉遥感卫星（VRSS-1）和GaoFen-1（GF-1）卫星的图像，作者自己收集的数据；<br>  算法：SVD Network</p>
+<p>  期刊：IEEE Transactions on Geoscience &amp; Remote Sensing，2016<br>  目标：ship；spaceborne optical image；数据来源于委内瑞拉遥感卫星（VRSS-1）和GaoFen-1（GF-1）卫星的图像，作者自己收集的数据，这部分数据用于训练和测试，另外从google地图选了600张ship图（加上从那两个卫星提取的ship图片）用于svm的训练；<br>  算法：SVD Network，两阶段：第一阶段提取ship candidate，第二阶段对candidate用svm分类。</p>
 <p>  ps：这个文章说没有公共船舶检测数据集，没有人公布其源代码或软件。</p>
 <p>2.Ship Detection in Images Obtained from the Unmanned Aerial Vehicle (UAV)</p>
-<p>  期刊：Indian Journal of Science and Technology<br>  目标：ship；无人机拍摄（光学图像）；数据来源于</p>
-
+<p>  期刊：Indian Journal of Science and Technology<br>  目标：ship；无人机拍摄视频；数据来源于Google地图，Yandex地图，一小部分来自互联网（共1000张）；<br>  算法：使用一个形状级联和自动提取特征级联（在此部分使用DNN）</p>
+<p>  ps：是将训练好的网络应用于识别无人机视频中的ship</p>
+<p>3.Compressed-Domain Ship Detection on Spaceborne Optical Image Using Deep Neural Network and Extreme Learning Machine</p>
+<p>  期刊：IEEE Transactions on Geoscience and Remote Sensing，2015<br>  目标：ship；spaceborne optical image；数据来源 4000张 5m分辨率的SPOT 5全色图片，大小为2000*2000，这个数据集是作者建立的；<br>  算法：JPEG2000压缩域提取的小波系数进行候选船的提取，深度神经网络用来进行高层特征的提取和分类，极限学习机用来更有效低池化特征和做决策。</p>
+<p>4.Rotation Sliding Window of the Hog Feature in Remote Sensing Images for Ship Detection</p>
+<p>  会议：2015 8th International Symposium on Computational Intelligence and Design<br>  目标：ship；数据来源 404正样本，来自google地图，410负样本，来自high random I satellite data；<br>  算法：Rotation Sliding Window+HOG+SVM</p>
+<font color="blue">总结：在google上搜索了几天，发现在海洋遥感这一块，满足海洋遥感+光学图像两个条件的，识别ship的最多，而识别coastline，island等的非常少，找到了几篇识别coastline和island的文章，都不是用光学图像做的。</font>
       
 
       

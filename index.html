@@ -258,7 +258,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>这个demo.py展示用训练好的VGG16在示例图片上的测试效果。<br>‘’’ python<br>import _init_paths<br>from fast_rcnn.config import cfg<br>from fast_rcnn.test import im_detect<br>from fast_rcnn.nms_wrapper import nms<br>from utils.timer import Timer<br>import matplotlib.pyplot as plt<br>import numpy as np<br>import scipy.io as sio<br>import caffe, os, sys, cv2<br>import argparse</p>
+        <p>这个demo.py展示用训练好的VGG16在示例图片上的测试效果。<br>‘’’python<br>import _init_paths<br>from fast_rcnn.config import cfg<br>from fast_rcnn.test import im_detect<br>from fast_rcnn.nms_wrapper import nms<br>from utils.timer import Timer<br>import matplotlib.pyplot as plt<br>import numpy as np<br>import scipy.io as sio<br>import caffe, os, sys, cv2<br>import argparse</p>
 <p>CLASSES = (‘<strong>background</strong>‘,<br>           ‘aeroplane’, ‘bicycle’, ‘bird’, ‘boat’,<br>           ‘bottle’, ‘bus’, ‘car’, ‘cat’, ‘chair’,<br>           ‘cow’, ‘diningtable’, ‘dog’, ‘horse’,<br>           ‘motorbike’, ‘person’, ‘pottedplant’,<br>           ‘sheep’, ‘sofa’, ‘train’, ‘tvmonitor’)</p>
 <p>NETS = {‘vgg16’: (‘VGG16’,<br>                  ‘VGG16_faster_rcnn_final.caffemodel’),<br>        ‘zf’: (‘ZF’,<br>                  ‘ZF_faster_rcnn_final.caffemodel’)}<br>‘’’</p>
 <p>def vis_detections(im, class_name, dets, thresh=0.5):<br>    “””Draw detected bounding boxes.”””<br>    inds = np.where(dets[:, -1] &gt;= thresh)[0]<br>    if len(inds) == 0:<br>        return</p>

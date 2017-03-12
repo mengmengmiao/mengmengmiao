@@ -238,6 +238,60 @@
 
 
   
+    <article id="post-python-t-tips-1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/03/12/python-t-tips-1/">python-t tips 1</a>
+    </h1>
+  
+
+        
+        <a href="/2017/03/12/python-t-tips-1/" class="archive-article-date">
+  	<time datetime="2017-03-12T09:15:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-12</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>1��a=[[1,2][3,4]]<br>   a[0,0] #����<br>   a[0][0] #��ȷ</p>
+<p>   a=numpy.array([[1,2],[3,4]])<br>   a[0,0] #��ȷ<br>   a[0][0] #��ȷ<br>
+        
+          <a class="article-more-a" href="/2017/03/12/python-t-tips-1/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/03/12/python-t-tips-1/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
     <article id="post-py-faster-rcnn-demo-py" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -258,8 +312,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>  这个demo.py展示用训练好的VGG16在示例图片上的测试效果。<br>1._init_paths.py文件，确保py-faster-rcnn/lib和py-fast_rcnn/caffe-fast_rcnn/python加入环境变量<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> _init_paths </div><div class="line"><span class="keyword">from</span> fast_rcnn.config <span class="keyword">import</span> cfg  <span class="comment">#这4个文件都是py-fast_rcnn/lib/fast_rcnn/和/utils目录下的文件</span></div><div class="line"><span class="keyword">from</span> fast_rcnn.test <span class="keyword">import</span> im_detect</div><div class="line"><span class="keyword">from</span> fast_rcnn.nms_wrapper <span class="keyword">import</span> nms</div><div class="line"><span class="keyword">from</span> utils.timer <span class="keyword">import</span> Timer</div><div class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</div><div class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</div><div class="line"><span class="keyword">import</span> scipy.io <span class="keyword">as</span> sio <span class="comment">#io可读取matplot文件</span></div><div class="line"><span class="keyword">import</span> caffe, os, sys, cv2</div><div class="line"><span class="keyword">import</span> argparse <span class="comment">#用于解析命令行参数和选项的标准模块</span></div><div class="line"></div><div class="line">CLASSES = (<span class="string">'__background__'</span>,</div><div class="line">           <span class="string">'aeroplane'</span>, <span class="string">'bicycle'</span>, <span class="string">'bird'</span>, <span class="string">'boat'</span>,</div><div class="line">           <span class="string">'bottle'</span>, <span class="string">'bus'</span>, <span class="string">'car'</span>, <span class="string">'cat'</span>, <span class="string">'chair'</span>,</div><div class="line">           <span class="string">'cow'</span>, <span class="string">'diningtable'</span>, <span class="string">'dog'</span>, <span class="string">'horse'</span>,</div><div class="line">           <span class="string">'motorbike'</span>, <span class="string">'person'</span>, <span class="string">'pottedplant'</span>,</div><div class="line">           <span class="string">'sheep'</span>, <span class="string">'sofa'</span>, <span class="string">'train'</span>, <span class="string">'tvmonitor'</span>) <span class="comment">#[]:列表，():元组，内容不可修改，&#123;&#125;字典</span></div><div class="line"></div><div class="line">NETS = &#123;<span class="string">'vgg16'</span>: (<span class="string">'VGG16'</span>,</div><div class="line">                  <span class="string">'VGG16_faster_rcnn_final.caffemodel'</span>),</div><div class="line">        <span class="string">'zf'</span>: (<span class="string">'ZF'</span>,</div><div class="line">                  <span class="string">'ZF_faster_rcnn_final.caffemodel'</span>)&#125;</div></pre></td></tr></table></figure></p>
-
+        <p>这个demo.py展示用训练好的VGG16在示例图片上的测试效果。<br>
+        
+          <a class="article-more-a" href="/2017/03/12/py-faster-rcnn-demo-py/#more">more >></a>
+        
       
 
       
@@ -680,70 +736,6 @@
 
 
   
-    <article id="post-MLY-13-Error-analysis-look-at-dev-set-examples-to-evaluate-ideas" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/02/17/MLY-13-Error-analysis-look-at-dev-set-examples-to-evaluate-ideas/">MLY -- 13.Error analysis:look at dev set examples to evaluate ideas</a>
-    </h1>
-  
-
-        
-        <a href="/2017/02/17/MLY-13-Error-analysis-look-at-dev-set-examples-to-evaluate-ideas/" class="archive-article-date">
-  	<time datetime="2017-02-17T12:48:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-17</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>当你在玩你的猫app时，你发现几个把狗狗分类成猫的例子。但是有些狗狗真的很像猫！<br>
-        
-          <a class="article-more-a" href="/2017/02/17/MLY-13-Error-analysis-look-at-dev-set-examples-to-evaluate-ideas/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">翻译</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/02/17/MLY-13-Error-analysis-look-at-dev-set-examples-to-evaluate-ideas/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -841,15 +833,11 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">faster-rcnnԴ������</a>
+                <a href="javascript:void(0)" class="js-tag color1">faster-rcnn源码解读</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">new papers</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">faster-rcnn源码解读</a>
               </li>
             
             <div class="clearfix"></div>

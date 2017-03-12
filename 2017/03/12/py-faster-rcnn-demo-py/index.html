@@ -6,20 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://mengmengmiao.github.io">
-  <title>MLY -- 11.When to change dev/test sets and metrics | mengmengmiao</title>
+  <title>py-faster-rcnn demo.py | mengmengmiao</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="当开始做一个新项目时，我会快速选择开发集和测试集，因为这会给团队一个明确的目标。">
+  <meta name="description" content="#!/usr/bin/env python
+——————————————————–Faster R-CNNCopyright (c) 2015 MicrosoftLicensed under The MIT License [see LICENSE for details]Written by Ross Girshick——————————————————–“””Demo script showi">
 <meta property="og:type" content="article">
-<meta property="og:title" content="MLY -- 11.When to change dev/test sets and metrics">
-<meta property="og:url" content="https://mengmengmiao.github.io/2017/02/17/MLY-11-When-to-change-dev-test-sets-and-metrics/index.html">
+<meta property="og:title" content="py-faster-rcnn demo.py">
+<meta property="og:url" content="https://mengmengmiao.github.io/2017/03/12/py-faster-rcnn-demo-py/index.html">
 <meta property="og:site_name" content="mengmengmiao">
-<meta property="og:description" content="当开始做一个新项目时，我会快速选择开发集和测试集，因为这会给团队一个明确的目标。">
-<meta property="og:image" content="http://wx4.sinaimg.cn/mw690/006FWFp1ly1fctfpfl4maj30gj0begto.jpg">
-<meta property="og:updated_time" content="2017-02-17T14:17:28.415Z">
+<meta property="og:description" content="#!/usr/bin/env python
+——————————————————–Faster R-CNNCopyright (c) 2015 MicrosoftLicensed under The MIT License [see LICENSE for details]Written by Ross Girshick——————————————————–“””Demo script showi">
+<meta property="og:updated_time" content="2017-03-12T08:10:12.879Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="MLY -- 11.When to change dev/test sets and metrics">
-<meta name="twitter:description" content="当开始做一个新项目时，我会快速选择开发集和测试集，因为这会给团队一个明确的目标。">
-<meta name="twitter:image" content="http://wx4.sinaimg.cn/mw690/006FWFp1ly1fctfpfl4maj30gj0begto.jpg">
+<meta name="twitter:title" content="py-faster-rcnn demo.py">
+<meta name="twitter:description" content="#!/usr/bin/env python
+——————————————————–Faster R-CNNCopyright (c) 2015 MicrosoftLicensed under The MIT License [see LICENSE for details]Written by Ross Girshick——————————————————–“””Demo script showi">
   
     <link rel="alternative" href="/atom.xml" title="mengmengmiao" type="application/atom+xml">
   
@@ -159,28 +160,122 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-MLY-11-When-to-change-dev-test-sets-and-metrics" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-py-faster-rcnn-demo-py" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      MLY -- 11.When to change dev/test sets and metrics
+      py-faster-rcnn demo.py
     </h1>
   
 
         
-        <a href="/2017/02/17/MLY-11-When-to-change-dev-test-sets-and-metrics/" class="archive-article-date">
-  	<time datetime="2017-02-17T04:29:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-17</time>
+        <a href="/2017/03/12/py-faster-rcnn-demo-py/" class="archive-article-date">
+  	<time datetime="2017-03-12T07:45:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-12</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>当开始做一个新项目时，我会快速选择开发集和测试集，因为这会给团队一个明确的目标。<br><a id="more"></a><br>通常，我会要求我的团队在一周之内提出初始的开发集、测试集和度量，大多时候都不会多于一周。先提出一些不完美的东西使项目能前进下去，比过多考虑开发集、测试集、度量好的多。但是，一周时间线并不适用于成熟的应用。例如，垃圾邮件是一个成熟的深度学习应用。我曾见到在已经很成熟的系统上工作的团队花费数月的时间去获得好点儿的开发/测试集。<br>如果在后续开发中，你发现初始开发集、测试集、度量偏离了目标方向（missed the mark），一定要快速地改进。例如，如果你的开发集+度量使分类器A得分优于分类器B，但是你的团队认为分类器B实际上对你的产品更好，那么这就可能是你需要改进你的开发集、测试集或者度量的时候了。<br><u>1.实际的分布和开发集、测试集的分布不同</u><br>假设你初始的开发/测试集主要由成年猫的图片组成。当发布了app后，出乎意料，你发现用户会上传很多幼年猫的图片。此时，开发/测试集的分布就不能代表实际的分布了。在这种情况下，你需要更新开发/测试集，使其更具代表性。<br><img src="http://wx4.sinaimg.cn/mw690/006FWFp1ly1fctfpfl4maj30gj0begto.jpg" alt="MLY-11"><br><u>2.过拟合开发集了</u><br>重复地用开发集来评价ideas可能导致过拟合开发集。当项目开发结束时，需要在测试集上评估你的系统。如果你发现开发集的表现比测试集好，那么这可能就是过拟合开发集了。在这种情况下，你需要一个新的开发集（a fresh dev set）。<br>如果你需要跟踪团队的进展，你可以用测试集定期评估你的系统（例如每周一次或每月一次）。但是不要用测试集做任何关于算法的决策，包括是否要回滚到上一个系统。如果你这么做了，系统将会开始过拟合测试集。并且不能再依赖测试集给出系统性能的完全无偏评估（当你发表论文或使用这个评估去做商业决策时就需要完全无偏评估）。<br><u>3.度量（the metric）中不包括项目需要优化的东西</u><br>假设对于猫分类器，你选择了分类准确度（classification accuracy）作为度量（metric），在这种度量下，分类器A比分类器B好。但是，当你实际去用这两种算法时，你发现分类器A偶尔会允许色情图片溜过去。即使分类器A准确率更高，但偶尔的一张色情图片会给用户留下坏印象，因此分类器A并不可取。<br>此时，度量未能分辨出算法B实际上比算法A好。因此，度量不再可信，是时候改变度量了。例如，你可以改变度量使其惩罚色情图片通过。我强烈建议选择一个新的度量，并用这个新度量为团队定义一个新目标，而不是在没有可信度量的情况下工作太长时间甚至恢复到手动选择分类器。<br>在项目期改变开发/测试集或评价度量是很常见的。初始的开发/测试集能帮助你快速进入迭代期。如果你发现开发/测试集或者度量不再能指引正确的方向，那也没事儿。只要改变它们并且保证你的团队知道新的方向就行了。</p>
+        <p>#!/usr/bin/env python</p>
+<h1 id="——————————————————–"><a href="#——————————————————–" class="headerlink" title="——————————————————–"></a>——————————————————–</h1><h1 id="Faster-R-CNN"><a href="#Faster-R-CNN" class="headerlink" title="Faster R-CNN"></a>Faster R-CNN</h1><h1 id="Copyright-c-2015-Microsoft"><a href="#Copyright-c-2015-Microsoft" class="headerlink" title="Copyright (c) 2015 Microsoft"></a>Copyright (c) 2015 Microsoft</h1><h1 id="Licensed-under-The-MIT-License-see-LICENSE-for-details"><a href="#Licensed-under-The-MIT-License-see-LICENSE-for-details" class="headerlink" title="Licensed under The MIT License [see LICENSE for details]"></a>Licensed under The MIT License [see LICENSE for details]</h1><h1 id="Written-by-Ross-Girshick"><a href="#Written-by-Ross-Girshick" class="headerlink" title="Written by Ross Girshick"></a>Written by Ross Girshick</h1><h1 id="——————————————————–-1"><a href="#——————————————————–-1" class="headerlink" title="——————————————————–"></a>——————————————————–</h1><p>“””<br>Demo script showing detections in sample images.<br>See README.md for installation instructions before running.<br>“””</p>
+<p>import _init_paths<br>from fast_rcnn.config import cfg<br>from fast_rcnn.test import im_detect<br>from fast_rcnn.nms_wrapper import nms<br>from utils.timer import Timer<br>import matplotlib.pyplot as plt<br>import numpy as np<br>import scipy.io as sio<br>import caffe, os, sys, cv2<br>import argparse</p>
+<p>CLASSES = (‘<strong>background</strong>‘,<br>           ‘aeroplane’, ‘bicycle’, ‘bird’, ‘boat’,<br>           ‘bottle’, ‘bus’, ‘car’, ‘cat’, ‘chair’,<br>           ‘cow’, ‘diningtable’, ‘dog’, ‘horse’,<br>           ‘motorbike’, ‘person’, ‘pottedplant’,<br>           ‘sheep’, ‘sofa’, ‘train’, ‘tvmonitor’)</p>
+<p>NETS = {‘vgg16’: (‘VGG16’,<br>                  ‘VGG16_faster_rcnn_final.caffemodel’),<br>        ‘zf’: (‘ZF’,<br>                  ‘ZF_faster_rcnn_final.caffemodel’)}</p>
+<p>def vis_detections(im, class_name, dets, thresh=0.5):<br>    “””Draw detected bounding boxes.”””<br>    inds = np.where(dets[:, -1] &gt;= thresh)[0]<br>    if len(inds) == 0:<br>        return</p>
+<pre><code>im = im[:, :, (2, 1, 0)]
+fig, ax = plt.subplots(figsize=(12, 12))
+ax.imshow(im, aspect=&apos;equal&apos;)
+for i in inds:
+    bbox = dets[i, :4]
+    score = dets[i, -1]
 
+    ax.add_patch(
+        plt.Rectangle((bbox[0], bbox[1]),
+                      bbox[2] - bbox[0],
+                      bbox[3] - bbox[1], fill=False,
+                      edgecolor=&apos;red&apos;, linewidth=3.5)
+        )
+    ax.text(bbox[0], bbox[1] - 2,
+            &apos;{:s} {:.3f}&apos;.format(class_name, score),
+            bbox=dict(facecolor=&apos;blue&apos;, alpha=0.5),
+            fontsize=14, color=&apos;white&apos;)
+
+ax.set_title((&apos;{} detections with &apos;
+              &apos;p({} | box) &gt;= {:.1f}&apos;).format(class_name, class_name,
+                                              thresh),
+              fontsize=14)
+plt.axis(&apos;off&apos;)
+plt.tight_layout()
+plt.draw()
+</code></pre><p>def demo(net, image_name):<br>    “””Detect object classes in an image using pre-computed object proposals.”””</p>
+<pre><code># Load the demo image
+im_file = os.path.join(cfg.DATA_DIR, &apos;demo&apos;, image_name)
+im = cv2.imread(im_file)
+
+# Detect all object classes and regress object bounds
+timer = Timer()
+timer.tic()
+scores, boxes = im_detect(net, im)
+timer.toc()
+print (&apos;Detection took {:.3f}s for &apos;
+       &apos;{:d} object proposals&apos;).format(timer.total_time, boxes.shape[0])
+
+# Visualize detections for each class
+CONF_THRESH = 0.8
+NMS_THRESH = 0.3
+for cls_ind, cls in enumerate(CLASSES[1:]):
+    cls_ind += 1 # because we skipped background
+    cls_boxes = boxes[:, 4*cls_ind:4*(cls_ind + 1)]
+    cls_scores = scores[:, cls_ind]
+    dets = np.hstack((cls_boxes,
+                      cls_scores[:, np.newaxis])).astype(np.float32)
+    keep = nms(dets, NMS_THRESH)
+    dets = dets[keep, :]
+    vis_detections(im, cls, dets, thresh=CONF_THRESH)
+</code></pre><p>def parse_args():<br>    “””Parse input arguments.”””<br>    parser = argparse.ArgumentParser(description=’Faster R-CNN demo’)<br>    parser.add_argument(‘–gpu’, dest=’gpu_id’, help=’GPU device id to use [0]’,<br>                        default=0, type=int)<br>    parser.add_argument(‘–cpu’, dest=’cpu_mode’,<br>                        help=’Use CPU mode (overrides –gpu)’,<br>                        action=’store_true’)<br>    parser.add_argument(‘–net’, dest=’demo_net’, help=’Network to use [vgg16]’,<br>                        choices=NETS.keys(), default=’vgg16’)</p>
+<pre><code>args = parser.parse_args()
+
+return args
+</code></pre><p>if <strong>name</strong> == ‘<strong>main</strong>‘:<br>    cfg.TEST.HAS_RPN = True  # Use RPN for proposals</p>
+<pre><code>args = parse_args()
+
+prototxt = os.path.join(cfg.MODELS_DIR, NETS[args.demo_net][0],
+                        &apos;faster_rcnn_alt_opt&apos;, &apos;faster_rcnn_test.pt&apos;)
+caffemodel = os.path.join(cfg.DATA_DIR, &apos;faster_rcnn_models&apos;,
+                          NETS[args.demo_net][1])
+
+if not os.path.isfile(caffemodel):
+    raise IOError((&apos;{:s} not found.\nDid you run ./data/script/&apos;
+                   &apos;fetch_faster_rcnn_models.sh?&apos;).format(caffemodel))
+
+if args.cpu_mode:
+    caffe.set_mode_cpu()
+else:
+    caffe.set_mode_gpu()
+    caffe.set_device(args.gpu_id)
+    cfg.GPU_ID = args.gpu_id
+net = caffe.Net(prototxt, caffemodel, caffe.TEST)
+
+print &apos;\n\nLoaded network {:s}&apos;.format(caffemodel)
+
+# Warmup on a dummy image
+im = 128 * np.ones((300, 500, 3), dtype=np.uint8)
+for i in xrange(2):
+    _, _= im_detect(net, im)
+
+im_names = [&apos;000456.jpg&apos;, &apos;000542.jpg&apos;, &apos;001150.jpg&apos;,
+            &apos;001763.jpg&apos;, &apos;004545.jpg&apos;]
+for im_name in im_names:
+    print &apos;~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~&apos;
+    print &apos;Demo for data/demo/{}&apos;.format(im_name)
+    demo(net, im_name)
+
+plt.show()
+</code></pre>
       
 
       
@@ -224,7 +319,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">翻译</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">faster-rcnnԴ������</a>
         		</li>
       		
 		</ul>
@@ -280,7 +375,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=https://mengmengmiao.github.io/2017/02/17/MLY-11-When-to-change-dev-test-sets-and-metrics/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=https://mengmengmiao.github.io/2017/03/12/py-faster-rcnn-demo-py/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -294,18 +389,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2017/02/17/Understanding-Neural-Networks-Through-Deep-Visualization/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2027/01/25/this-is-meng/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          Understanding Neural Networks Through Deep Visualization
+          MLY翻译 -- Machine Learning Yearning 目录
         
       </div>
     </a>
   
   
-    <a href="/2017/02/16/MLY-10-Having-a-dev-set-and-metric-speeds-up-iterations/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">MLY -- 10.Having a dev set and metric speeds up iterations</div>
+    <a href="/2017/03/08/如何远程ssh运行图形化应用？putty-Xming/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">如何远程ssh运行图形化应用？putty+Xming</div>
       <i class="icon-circle-right"></i>
     </a>
   

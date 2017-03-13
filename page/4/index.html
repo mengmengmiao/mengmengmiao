@@ -6,21 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://mengmengmiao.github.io">
-  <title>python tips 1 | mengmengmiao</title>
+  <title>mengmengmiao</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1，a=[[1,2][3,4]]   a[0,0] #错误   a[0][0] #正确
-   a=numpy.array([[1,2],[3,4]])   a[0,0] #正确   a[0][0] #正确">
-<meta property="og:type" content="article">
-<meta property="og:title" content="python tips 1">
-<meta property="og:url" content="https://mengmengmiao.github.io/2017/03/12/python-t-tips-1/index.html">
+  <meta name="description" content="love life">
+<meta property="og:type" content="website">
+<meta property="og:title" content="mengmengmiao">
+<meta property="og:url" content="https://mengmengmiao.github.io/page/4/index.html">
 <meta property="og:site_name" content="mengmengmiao">
-<meta property="og:description" content="1，a=[[1,2][3,4]]   a[0,0] #错误   a[0][0] #正确
-   a=numpy.array([[1,2],[3,4]])   a[0,0] #正确   a[0][0] #正确">
-<meta property="og:updated_time" content="2017-03-13T13:11:15.325Z">
+<meta property="og:description" content="love life">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="python tips 1">
-<meta name="twitter:description" content="1，a=[[1,2][3,4]]   a[0,0] #错误   a[0][0] #正确
-   a=numpy.array([[1,2],[3,4]])   a[0,0] #正确   a[0][0] #正确">
+<meta name="twitter:title" content="mengmengmiao">
+<meta name="twitter:description" content="love life">
   
     <link rel="alternative" href="/atom.xml" title="mengmengmiao" type="application/atom+xml">
   
@@ -160,150 +156,66 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-python-t-tips-1" class="article article-type-post " itemscope itemprop="blogPost">
+            
+  
+    <article id="post-Machine-Learning-Yearning-Why-Machine-Learning-Strategy" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 class="article-title" itemprop="name">
-      python tips 1
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/01/25/Machine-Learning-Yearning-Why-Machine-Learning-Strategy/">MLY翻译 -- 1.Why Machine Learning Strategy?</a>
     </h1>
   
 
         
-        <a href="/2017/03/12/python-t-tips-1/" class="archive-article-date">
-  	<time datetime="2017-03-12T09:15:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-12</time>
+        <a href="/2017/01/25/Machine-Learning-Yearning-Why-Machine-Learning-Strategy/" class="archive-article-date">
+  	<time datetime="2017-01-25T13:42:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-01-25</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>1，a=[[1,2][3,4]]<br>   a[0,0] #错误<br>   a[0][0] #正确</p>
-<p>   a=numpy.array([[1,2],[3,4]])<br>   a[0,0] #正确<br>   a[0][0] #正确<br><a id="more"></a><br>2, a=numpy.array(<br>                 [<br>                  [[1,2,21],[3,4,43]],<br>                  [[5,6,65],[7,8,87]],<br>                  [[9,10,19],[11,12,2111]]<br>                  ])<br>   a[:,:,(2,1,0)]是将第三维的元素的顺序按照2,1,0重新排列<br>3，os.path.join(“home”, “me”, “mywork”)<br>   将“home/me/mywork”返回<br>4.将print输出打印到文件夹：<br>  import cPickle<br>  f = open(‘meng.txt’,’w+’)  # f指向 存print输出结果的文件<br>  s = cPickle.load(open(‘meng.pkl’)) # s是输出结果<br>  print &gt;&gt; f,s</p>
-<ol>
-<li><em>, </em>和<em>xx</em>的区别</li>
-</ol>
-
+        <p>机器学习是很多应用的基础，如网页搜索，反垃圾邮件，语音识别，推荐系统等。如果你的团队正在做一个基于机器学习的应用，这本书能够帮你的团队取得快速的进步。</p>
+<h2 id="一个例子：提供猫图片的创业公司"><a href="#一个例子：提供猫图片的创业公司" class="headerlink" title="一个例子：提供猫图片的创业公司"></a>一个例子：提供猫图片的创业公司</h2><p>假如你现在正在创建一个为猫奴提供很多猫图片的公司，你用神经网络建立一个从图片中检测猫的计算机视觉系统。但悲剧的是，你发现你的学习算法精度不够，面临提高猫检测器精度的巨大压力，你要怎么做？<br>你的小团队很给力，他们提出以下解决问题的方向：<br>
+        
+          <a class="article-more-a" href="/2017/01/25/Machine-Learning-Yearning-Why-Machine-Learning-Strategy/#more">more >></a>
+        
       
 
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="http://ww1.sinaimg.cn/mw1024/87699103jw1fc2xc5q8mkj20df0dqdhb.jpg">
-                      <span class="reward-type">支付宝</span>
-                    </div>
-                    
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="http://ww3.sinaimg.cn/mw1024/87699103jw1fc2xc63blcj20dd0ddjst.jpg">
-                      <span class="reward-type">微信</span>
-                    </div>
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
       
     </div>
     <div class="article-info article-info-index">
       
       
-      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">翻译</a>
+        		</li>
+      		
+		</ul>
+	</div>
 
       
 
       
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
-        </div>
-      </div>
-    </span>
-  </div>
-</div>
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/01/25/Machine-Learning-Yearning-Why-Machine-Learning-Strategy/">展开全文 >></a>
+        </p>
+      
 
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=https://mengmengmiao.github.io/2017/03/12/python-t-tips-1/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
 
-  
-<nav id="article-nav">
-  
-    <a href="/2017/03/13/py-faster-rcnn-experiments-scripts-faster-rcnn-alt-opt-sh/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          py-faster-rcnn/experiments/scripts/faster_rcnn_alt_opt.sh
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2017/03/12/py-faster-rcnn-demo-py/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">py-faster-rcnn/tools/demo.py</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
+
 
 
 
@@ -311,10 +223,11 @@
 
 
   
-    <div class="duoshuo"></div>
   
-
-
+    <nav id="page-nav">
+      <a class="extend prev" rel="prev" href="/page/3/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span>
+    </nav>
+  
 
 
           </div>
@@ -336,8 +249,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: false,
-		isPost: true,
+		isHome: true,
+		isPost: false,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,

@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="mengmengmiao">
 <meta property="og:description" content="1，a=[[1,2][3,4]]   a[0,0] #错误   a[0][0] #正确
    a=numpy.array([[1,2],[3,4]])   a[0,0] #正确   a[0][0] #正确">
-<meta property="og:updated_time" content="2017-03-13T04:03:34.204Z">
+<meta property="og:updated_time" content="2017-03-13T13:11:15.325Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="python tips 1">
 <meta name="twitter:description" content="1，a=[[1,2][3,4]]   a[0,0] #错误   a[0][0] #正确
@@ -181,7 +181,10 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>1，a=[[1,2][3,4]]<br>   a[0,0] #错误<br>   a[0][0] #正确</p>
-<p>   a=numpy.array([[1,2],[3,4]])<br>   a[0,0] #正确<br>   a[0][0] #正确<br><a id="more"></a><br>2, a=numpy.array(<br>                 [<br>                  [[1,2,21],[3,4,43]],<br>                  [[5,6,65],[7,8,87]],<br>                  [[9,10,19],[11,12,2111]]<br>                  ])<br>   a[:,:,(2,1,0)]是将第三维的元素的顺序按照2,1,0重新排列<br>3，os.path.join(“home”, “me”, “mywork”)<br>   将“home/me/mywork”返回</p>
+<p>   a=numpy.array([[1,2],[3,4]])<br>   a[0,0] #正确<br>   a[0][0] #正确<br><a id="more"></a><br>2, a=numpy.array(<br>                 [<br>                  [[1,2,21],[3,4,43]],<br>                  [[5,6,65],[7,8,87]],<br>                  [[9,10,19],[11,12,2111]]<br>                  ])<br>   a[:,:,(2,1,0)]是将第三维的元素的顺序按照2,1,0重新排列<br>3，os.path.join(“home”, “me”, “mywork”)<br>   将“home/me/mywork”返回<br>4.将print输出打印到文件夹：<br>  import cPickle<br>  f = open(‘meng.txt’,’w+’)  # f指向 存print输出结果的文件<br>  s = cPickle.load(open(‘meng.pkl’)) # s是输出结果<br>  print &gt;&gt; f,s</p>
+<ol>
+<li><em>, </em>和<em>xx</em>的区别</li>
+</ol>
 
       
 
@@ -285,18 +288,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2027/01/25/this-is-meng/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/03/13/py-faster-rcnn-experiments-scripts-faster-rcnn-alt-opt-sh/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          MLY翻译 -- Machine Learning Yearning 目录
+          py-faster-rcnn/experiments/scripts/faster_rcnn_alt_opt.sh
         
       </div>
     </a>
   
   
     <a href="/2017/03/12/py-faster-rcnn-demo-py/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">py-faster-rcnn demo.py</div>
+      <div class="article-nav-title">py-faster-rcnn/tools/demo.py</div>
       <i class="icon-circle-right"></i>
     </a>
   

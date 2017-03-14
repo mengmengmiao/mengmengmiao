@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="mengmengmiao">
 <meta property="og:description" content="1，a=[[1,2][3,4]]   a[0,0] #错误   a[0][0] #正确
    a=numpy.array([[1,2],[3,4]])   a[0,0] #正确   a[0][0] #正确">
-<meta property="og:updated_time" content="2017-03-13T13:11:15.325Z">
+<meta property="og:updated_time" content="2017-03-14T04:54:25.064Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="python tips 1">
 <meta name="twitter:description" content="1，a=[[1,2][3,4]]   a[0,0] #错误   a[0][0] #正确
@@ -181,10 +181,8 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>1，a=[[1,2][3,4]]<br>   a[0,0] #错误<br>   a[0][0] #正确</p>
-<p>   a=numpy.array([[1,2],[3,4]])<br>   a[0,0] #正确<br>   a[0][0] #正确<br><a id="more"></a><br>2, a=numpy.array(<br>                 [<br>                  [[1,2,21],[3,4,43]],<br>                  [[5,6,65],[7,8,87]],<br>                  [[9,10,19],[11,12,2111]]<br>                  ])<br>   a[:,:,(2,1,0)]是将第三维的元素的顺序按照2,1,0重新排列<br>3，os.path.join(“home”, “me”, “mywork”)<br>   将“home/me/mywork”返回<br>4.将print输出打印到文件夹：<br>  import cPickle<br>  f = open(‘meng.txt’,’w+’)  # f指向 存print输出结果的文件<br>  s = cPickle.load(open(‘meng.pkl’)) # s是输出结果<br>  print &gt;&gt; f,s</p>
-<ol>
-<li><em>, </em>和<em>xx</em>的区别</li>
-</ol>
+<p>   a=numpy.array([[1,2],[3,4]])<br>   a[0,0] #正确<br>   a[0][0] #正确<br><a id="more"></a><br>2, a=numpy.array(<br>                 [<br>                  [[1,2,21],[3,4,43]],<br>                  [[5,6,65],[7,8,87]],<br>                  [[9,10,19],[11,12,2111]]<br>                  ])<br>   a[:,:,(2,1,0)]是将第三维的元素的顺序按照2,1,0重新排列<br>3，os.path.join(“home”, “me”, “mywork”)<br>   将“home/me/mywork”返回<br>4.将print输出打印到文件夹：<br>  import cPickle<br>  f = open(‘meng.txt’,’w+’)  # f指向 存print输出结果的文件<br>  s = cPickle.load(open(‘meng.pkl’)) # s是输出结果<br>  print &gt;&gt; f,s<br>5.sys.path —— 动态地改变Python搜索路径</p>
+<p>  如果python中导入的package或module不在环境变量PATH中，那么可以使用sys.path将要导入的package或module加入到PATH环境变量中。<br>  import sys<br>  sys.path.append(’引用模块的地址’)<br>  或者<br>  import sys<br>  sys.path.insert(0, ‘引用模块的地址’)<br>  程序向sys.path添加的目录只会在此程序的生命周期之内有效，其他所有的对sys.path的动态操作也是如此。<br>6.</p>
 
       
 
@@ -403,11 +401,11 @@
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">翻译</a>
+                <a href="javascript:void(0)" class="js-tag color1">new papers</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">new papers</a>
+                <a href="javascript:void(0)" class="js-tag color3">翻译</a>
               </li>
              
               <li class="article-tag-list-item">

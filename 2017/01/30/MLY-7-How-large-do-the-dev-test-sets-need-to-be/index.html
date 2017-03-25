@@ -6,17 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://mengmengmiao.github.io">
-  <title>Archives: 2017/3 | mengmengmiao</title>
+  <title>MLY -- 7.How large do the dev/test sets need to be? | mengmengmiao</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="love life">
-<meta property="og:type" content="website">
-<meta property="og:title" content="mengmengmiao">
-<meta property="og:url" content="https://mengmengmiao.github.io/archives/2017/03/index.html">
+  <meta name="description" content="开发集应该足够大，大到可以检测出多个算法之间的不同。例如，分类器A的分类精度是90.0%，分类器B的精度为90.1%，开发集有100个样例，则开发集不能检测出这0.1%的不同（将开发集输入分类器A、B进行分类，A、B的结果都是90个样例的类标签正确，所以不能区分A、B）。就我所见过的机器学习问题来说，100个样例的开发集确实小了点儿。一般，开发集都是1000到10000这么大。当你有了10000个">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MLY -- 7.How large do the dev/test sets need to be?">
+<meta property="og:url" content="https://mengmengmiao.github.io/2017/01/30/MLY-7-How-large-do-the-dev-test-sets-need-to-be/index.html">
 <meta property="og:site_name" content="mengmengmiao">
-<meta property="og:description" content="love life">
+<meta property="og:description" content="开发集应该足够大，大到可以检测出多个算法之间的不同。例如，分类器A的分类精度是90.0%，分类器B的精度为90.1%，开发集有100个样例，则开发集不能检测出这0.1%的不同（将开发集输入分类器A、B进行分类，A、B的结果都是90个样例的类标签正确，所以不能区分A、B）。就我所见过的机器学习问题来说，100个样例的开发集确实小了点儿。一般，开发集都是1000到10000这么大。当你有了10000个">
+<meta property="og:updated_time" content="2017-02-02T03:15:53.971Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="mengmengmiao">
-<meta name="twitter:description" content="love life">
+<meta name="twitter:title" content="MLY -- 7.How large do the dev/test sets need to be?">
+<meta name="twitter:description" content="开发集应该足够大，大到可以检测出多个算法之间的不同。例如，分类器A的分类精度是90.0%，分类器B的精度为90.1%，开发集有100个样例，则开发集不能检测出这0.1%的不同（将开发集输入分类器A、B进行分类，A、B的结果都是90个样例的类标签正确，所以不能区分A、B）。就我所见过的机器学习问题来说，100个样例的开发集确实小了点儿。一般，开发集都是1000到10000这么大。当你有了10000个">
   
     <link rel="alternative" href="/atom.xml" title="mengmengmiao" type="application/atom+xml">
   
@@ -156,195 +157,169 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-MLY-7-How-large-do-the-dev-test-sets-need-to-be" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/03/12/python-t-tips-1/" class="archive-article-date">
-  	<time datetime="2017-03-12T09:15:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-12</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/12/python-t-tips-1/">python tips 1</a>
+    <h1 class="article-title" itemprop="name">
+      MLY -- 7.How large do the dev/test sets need to be?
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/03/12/py-faster-rcnn-demo-py/" class="archive-article-date">
-  	<time datetime="2017-03-12T07:45:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-12</time>
+        
+        <a href="/2017/01/30/MLY-7-How-large-do-the-dev-test-sets-need-to-be/" class="archive-article-date">
+  	<time datetime="2017-01-30T13:12:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-01-30</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/12/py-faster-rcnn-demo-py/">py-faster-rcnn/tools/demo.py</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>开发集应该足够大，大到可以检测出多个算法之间的不同。例如，分类器A的分类精度是90.0%，分类器B的精度为90.1%，开发集有100个样例，则开发集不能检测出这0.1%的不同<font color="#D2691E">（将开发集输入分类器A、B进行分类，A、B的结果都是90个样例的类标签正确，所以不能区分A、B）</font>。就我所见过的机器学习问题来说，100个样例的开发集确实小了点儿。一般，开发集都是1000到10000这么大。当你有了10000个样例时，你就能检测出那0.1的提高啦(注释1)<font color="#D2691E">（我觉得0.01也能检测出来）</font>。<br>对于成熟而重要的应用，例如广告，网页搜索，产品推荐，我见过一些团队为哪怕提高0.01%的精确度而努力工作，因为这对公司的利益有直接的影响。在这种情况下，开发集可以远大于10000，以便检测出更小的提高。<br>测试集的大小呢？<br>测试集应该大到在测试你的系统的整体性能时，是可信服的。一个比较流行的方法是取30%的数据作为测试集，这种方法在适量数据(100到10000个样例)时，效果很好。但在大数据时期，有的机器学习问题的样例甚至超过了十亿，此时，开发/训练集占总数据的比例减少了，但数量变多了。其实没有必要具有过大的开发/测试集，只需要能评估你的算法就行了。</p>
+<p>[注释1]： 理论上，还可以测试算法的变化是否引起统计显著性差异。实际中，多数团队都不做这个测试（除非他们要发表学术性研究论文），我发现统计显著性检验对临时进展<font color="#D2691E">（interim progress，即每次改变算法获得的改进）</font>没有什么用</p>
 
-        <div class="article-info info-on-right">
-          
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="http://ww1.sinaimg.cn/mw1024/87699103jw1fc2xc5q8mkj20df0dqdhb.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="http://ww3.sinaimg.cn/mw1024/87699103jw1fc2xc63blcj20dd0ddjst.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">faster-rcnn源码解读</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">翻译</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=https://mengmengmiao.github.io/2017/01/30/MLY-7-How-large-do-the-dev-test-sets-need-to-be/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/03/08/如何远程ssh运行图形化应用？putty-Xming/" class="archive-article-date">
-  	<time datetime="2017-03-08T14:00:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-08</time>
-</a>
-        </div>
-    	 
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/08/如何远程ssh运行图形化应用？putty-Xming/">如何远程ssh运行图形化应用？putty+Xming</a>
-    </h1>
+    <a href="/2017/02/16/MLY-8-Establish-a-single-number-evaluation-metric-for-your-team-to-optimize/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          MLY -- 8.Establish a single-number evaluation metric for your team to optimize
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/01/28/MLY-6-Your-dev-and-test-sets-should-come-from-the-same-distribution/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">MLY -- 6.Your dev and test sets should come from the same distribution</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+
+  
+    <div class="duoshuo"></div>
   
 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/03/08/PSCP-windows传输文件-文件夹到linux/" class="archive-article-date">
-  	<time datetime="2017-03-08T09:53:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-08</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/08/PSCP-windows传输文件-文件夹到linux/">PSCP windows，linux传输文件/文件夹</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/03/08/“海洋遥感论文总结/" class="archive-article-date">
-  	<time datetime="2017-03-08T04:44:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-08</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/08/“海洋遥感论文总结/">海洋遥感论文总结</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/03/07/安装faster-rcnn/" class="archive-article-date">
-  	<time datetime="2017-03-07T12:31:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-07</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/07/安装faster-rcnn/">安装faster rcnn</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -367,8 +342,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
